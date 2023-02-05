@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c1b47665-1a6c-475b-a7c3-1e675bab98ad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8091/HanhChinh/LCTService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LCTService1.disco" MetadataType="Disco" ID="86ad2808-a68d-4737-942e-2d7663aaed97" SourceId="1" SourceUrl="http://localhost:8091/HanhChinh/LCTService.svc?disco" />
+    <MetadataFile FileName="LCTService3.xsd" MetadataType="Schema" ID="6143d47f-6d85-456e-b555-ffd4c8382f0c" SourceId="1" SourceUrl="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LCTService31.xsd" MetadataType="Schema" ID="ec1574a2-b3b1-41b7-a724-44cd83463c97" SourceId="1" SourceUrl="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LCTService32.xsd" MetadataType="Schema" ID="edbd374a-36a2-4666-b526-18bb77e0d453" SourceId="1" SourceUrl="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LCTService1.wsdl" MetadataType="Wsdl" ID="5a39c02f-726d-4d31-b20a-5857380b884e" SourceId="1" SourceUrl="http://localhost:8091/HanhChinh/LCTService.svc?wsdl" />
+    <MetadataFile FileName="LCTService33.xsd" MetadataType="Schema" ID="e18d8df1-c77e-4cca-8d59-0750a7f6656c" SourceId="1" SourceUrl="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

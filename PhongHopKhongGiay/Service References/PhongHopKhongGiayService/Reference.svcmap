@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d4854c9a-cd32-4928-8ced-9d48843f15b1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PhongHopKhongGiayService4.xsd" MetadataType="Schema" ID="890be9c5-1f07-46cc-83ee-f7844fe3ccfa" SourceId="1" SourceUrl="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PhongHopKhongGiayService41.xsd" MetadataType="Schema" ID="ffb2ff43-f6b2-44f1-821a-1ffff5bf75aa" SourceId="1" SourceUrl="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PhongHopKhongGiayService42.xsd" MetadataType="Schema" ID="6922e518-073a-43c0-b7f0-760135ef6252" SourceId="1" SourceUrl="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PhongHopKhongGiayService1.wsdl" MetadataType="Wsdl" ID="11202727-f4bb-4860-8202-b400f8198d94" SourceId="1" SourceUrl="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?wsdl" />
+    <MetadataFile FileName="PhongHopKhongGiayService1.disco" MetadataType="Disco" ID="05f1af0f-2e8c-4c71-9f60-d94560bfdad0" SourceId="1" SourceUrl="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?disco" />
+    <MetadataFile FileName="PhongHopKhongGiayService43.xsd" MetadataType="Schema" ID="22802fb4-8be0-4052-bca0-8a3b0f652bc4" SourceId="1" SourceUrl="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

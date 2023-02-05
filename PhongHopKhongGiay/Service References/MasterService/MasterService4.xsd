@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="EmailSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Port" type="xs:int" />
+      <xs:element minOccurs="0" name="Sender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Smtp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubjectTB" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailSetting" nillable="true" type="tns:EmailSetting" />
+  <xs:complexType name="KioskSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Idquay" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxNumberOnPage" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLThongTin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KioskSetting" nillable="true" type="tns:KioskSetting" />
+  <xs:complexType name="LdapSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseDn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternetIp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpServer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Port" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LdapSetting" nillable="true" type="tns:LdapSetting" />
+  <xs:complexType name="CommonSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LdapPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LdapUser" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonSetting" nillable="true" type="tns:CommonSetting" />
+  <xs:complexType name="WGGopYSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Target" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WgColor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WGGopYSetting" nillable="true" type="tns:WGGopYSetting" />
+  <xs:complexType name="SlideLichCongTacSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address_Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address_FontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="AnHienTenLanhDao" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AnHienTenThanhVien" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BackgroundUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BannerBackgroundUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Content_Color_Week" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Content_FontSize_Week" type="xs:int" />
+      <xs:element minOccurs="0" name="HomNayTime_Color_Week" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HomNayTime_FontSize_Week" type="xs:int" />
+      <xs:element minOccurs="0" name="Interval" type="xs:int" />
+      <xs:element minOccurs="0" name="Interval_Week" type="xs:int" />
+      <xs:element minOccurs="0" name="LanhDaoThamGia_Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanhDaoThamGia_Color_Week" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanhDaoThamGia_FontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="LanhDaoThamGia_FontSize_Week" type="xs:int" />
+      <xs:element minOccurs="0" name="NguoiChuTri_Color_Week" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NguoiChuTri_FontSize_Week" type="xs:int" />
+      <xs:element minOccurs="0" name="Presenter_Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Presenter_FontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="ThanhPhanThamDu_Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThanhPhanThamDu_Color_Week" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThanhPhanThamDu_FontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="ThanhPhanThamDu_FontSize_Week" type="xs:int" />
+      <xs:element minOccurs="0" name="Time_Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time_Color_Week" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time_FontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="Time_FontSize_Week" type="xs:int" />
+      <xs:element minOccurs="0" name="TitleBannerDonVi_Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TitleBannerDonVi_FontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="TitleBannerNoiDung_Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TitleBannerNoiDung_FontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="TitleBanner_NoiDung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TitleBanner_TenDonVi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TitleTuDen_Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TitleTuDen_FontSize" type="xs:int" />
+      <xs:element minOccurs="0" name="Title_Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title_FontSize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SlideLichCongTacSetting" nillable="true" type="tns:SlideLichCongTacSetting" />
+  <xs:complexType name="ZimbraSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseFolderId" type="xs:int" />
+      <xs:element minOccurs="0" name="Expires" type="xs:int" />
+      <xs:element minOccurs="0" name="FaultExpection" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSecure" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Port" type="xs:int" />
+      <xs:element minOccurs="0" name="PreauthKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZimbraServer" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZimbraSetting" nillable="true" type="tns:ZimbraSetting" />
+  <xs:complexType name="AlfrescoSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlfrescoFileSize" type="xs:int" />
+      <xs:element minOccurs="0" name="AlfrescoHost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AlfrescoHostFTP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AlfrescoPort" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlfrescoSetting" nillable="true" type="tns:AlfrescoSetting" />
+</xs:schema>

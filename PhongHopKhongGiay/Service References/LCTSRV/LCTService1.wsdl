@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LCTService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" />
+      <xsd:import schemaLocation="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities.LichHen" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILCTService_lstChucVu_InputMessage">
+    <wsdl:part name="parameters" element="tns:lstChucVu" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_lstChucVu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:lstChucVuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_DMCHUCVU_LstByChucVuID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DMCHUCVU_LstByChucVuID" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_DMCHUCVU_LstByChucVuID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DMCHUCVU_LstByChucVuIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_lstDonVi_InputMessage">
+    <wsdl:part name="parameters" element="tns:lstDonVi" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_lstDonVi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:lstDonViResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_lstDMVaiTroThamDu_InputMessage">
+    <wsdl:part name="parameters" element="tns:lstDMVaiTroThamDu" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_lstDMVaiTroThamDu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:lstDMVaiTroThamDuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_lstDMThanhPhanThamDu_InputMessage">
+    <wsdl:part name="parameters" element="tns:lstDMThanhPhanThamDu" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_lstDMThanhPhanThamDu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:lstDMThanhPhanThamDuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_DanhMucThanhPhanThamDu_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:DanhMucThanhPhanThamDu_Ins" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_DanhMucThanhPhanThamDu_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DanhMucThanhPhanThamDu_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_DanhMucThanhPhanThamDu_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:DanhMucThanhPhanThamDu_Upd" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_DanhMucThanhPhanThamDu_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DanhMucThanhPhanThamDu_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_lstDMNhomLichCongTac_InputMessage">
+    <wsdl:part name="parameters" element="tns:lstDMNhomLichCongTac" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_lstDMNhomLichCongTac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:lstDMNhomLichCongTacResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_VaiTroThamDu_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:VaiTroThamDu_Ins" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_VaiTroThamDu_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VaiTroThamDu_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_VaiTroThamDu_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:VaiTroThamDu_Lst" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_VaiTroThamDu_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VaiTroThamDu_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_VaiTroThamDu_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:VaiTroThamDu_Del" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_VaiTroThamDu_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VaiTroThamDu_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_ThanhPhanThamDu_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThanhPhanThamDu_Ins" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_ThanhPhanThamDu_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThanhPhanThamDu_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_ThanhPhanThamDu_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThanhPhanThamDu_Lst" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_ThanhPhanThamDu_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThanhPhanThamDu_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_ThanhPhanThamDu_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThanhPhanThamDu_Del" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_ThanhPhanThamDu_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThanhPhanThamDu_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_NhomLichCongTac_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhomLichCongTac_Ins" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_NhomLichCongTac_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhomLichCongTac_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_NhomLichCongTac_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhomLichCongTac_Lst" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_NhomLichCongTac_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhomLichCongTac_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_NhomLichCongTac_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:NhomLichCongTac_Del" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_NhomLichCongTac_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NhomLichCongTac_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_CANBO_Lst_VaiTro_InputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_Lst_VaiTro" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_CANBO_Lst_VaiTro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_Lst_VaiTroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_CANBO_LstAllVaiTro_InputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_LstAllVaiTro" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_CANBO_LstAllVaiTro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_LstAllVaiTroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_DMPhongHop_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DMPhongHop_Lst" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_DMPhongHop_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DMPhongHop_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_Ins" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_Upd" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LANHDAOTHAMGIA_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:LANHDAOTHAMGIA_Ins" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LANHDAOTHAMGIA_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LANHDAOTHAMGIA_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_Lst" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_LstUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_LstUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_LstUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_LstUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_LstDuyet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_LstDuyet" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_LstDuyet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_LstDuyetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_LstPhatHanh_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_LstPhatHanh" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_LstPhatHanh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_LstPhatHanhResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_Search" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetByLichCongTacID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetByLichCongTacID" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetByLichCongTacID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetByLichCongTacIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LANHDAOTHAMGIA_GetByLichCongTacID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LANHDAOTHAMGIA_GetByLichCongTacID" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LANHDAOTHAMGIA_GetByLichCongTacID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LANHDAOTHAMGIA_GetByLichCongTacIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_DelByLichCongTacID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_DelByLichCongTacID" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_DelByLichCongTacID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_DelByLichCongTacIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LANHDAOTHAMGIA_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:LANHDAOTHAMGIA_Del" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LANHDAOTHAMGIA_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LANHDAOTHAMGIA_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_FILEDINHKEM_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:FILEDINHKEM_Ins" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_FILEDINHKEM_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FILEDINHKEM_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_FILEDINHKEM_Get_InputMessage">
+    <wsdl:part name="parameters" element="tns:FILEDINHKEM_Get" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_FILEDINHKEM_Get_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FILEDINHKEM_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_FILEDINHKEM_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:FILEDINHKEM_Del" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_FILEDINHKEM_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FILEDINHKEM_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LANHDAOTHAMGIA_GetThanhPhanThamDu_InputMessage">
+    <wsdl:part name="parameters" element="tns:LANHDAOTHAMGIA_GetThanhPhanThamDu" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LANHDAOTHAMGIA_GetThanhPhanThamDu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LANHDAOTHAMGIA_GetThanhPhanThamDuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_THANHPHANTHAMDU_LstByDonViID_InputMessage">
+    <wsdl:part name="parameters" element="tns:THANHPHANTHAMDU_LstByDonViID" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_THANHPHANTHAMDU_LstByDonViID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:THANHPHANTHAMDU_LstByDonViIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_Get_NhomLanhDao_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_NhomLanhDao" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_Get_NhomLanhDao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_NhomLanhDaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_NHOMLICHCONGTAC_LstByDonViID_InputMessage">
+    <wsdl:part name="parameters" element="tns:NHOMLICHCONGTAC_LstByDonViID" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_NHOMLICHCONGTAC_LstByDonViID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NHOMLICHCONGTAC_LstByDonViIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_TV_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_TV" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_TV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_TVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_SnapShort_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_SnapShort" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_SnapShort_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_SnapShortResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_THANHPHANTHAMDU_LstVaiTro_InputMessage">
+    <wsdl:part name="parameters" element="tns:THANHPHANTHAMDU_LstVaiTro" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_THANHPHANTHAMDU_LstVaiTro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:THANHPHANTHAMDU_LstVaiTroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_SnapShort_CaNhan_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_SnapShort_CaNhan" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_SnapShort_CaNhan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_SnapShort_CaNhanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_lstCanBoThamGia_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_lstCanBoThamGia" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_lstCanBoThamGia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_lstCanBoThamGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetWeekDuyetLich_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetWeekDuyetLich" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetWeekDuyetLich_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetWeekDuyetLichResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetMonthDuyetLich_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetMonthDuyetLich" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetMonthDuyetLich_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetMonthDuyetLichResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetWeekPhatHanhLich_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetWeekPhatHanhLich" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetWeekPhatHanhLich_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetWeekPhatHanhLichResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetMonthPhatHanhLich_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetMonthPhatHanhLich" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GetMonthPhatHanhLich_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GetMonthPhatHanhLichResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_UpdDuyet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_UpdDuyet" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_UpdDuyet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_UpdDuyetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_UpdPhatHanh_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_UpdPhatHanh" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_UpdPhatHanh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_UpdPhatHanhResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_E_LOAILICH_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:E_LOAILICH_Lst" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_E_LOAILICH_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:E_LOAILICH_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_LICHCANHAN_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:HC_LICHCANHAN_Ins" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_LICHCANHAN_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HC_LICHCANHAN_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_LICHCANHAN_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:HC_LICHCANHAN_Upd" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_LICHCANHAN_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HC_LICHCANHAN_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_LICHCANHAN_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:HC_LICHCANHAN_Del" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_LICHCANHAN_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HC_LICHCANHAN_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_LICHCANHAN_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:HC_LICHCANHAN_Lst" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_LICHCANHAN_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HC_LICHCANHAN_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_DMLOAILICHCANHAN_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:HC_DMLOAILICHCANHAN_Lst" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_HC_DMLOAILICHCANHAN_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HC_DMLOAILICHCANHAN_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_UpdShowTV_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_UpdShowTV" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_UpdShowTV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_UpdShowTVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GETTENDONVI_InputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GETTENDONVI" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LICHCONGTAC_GETTENDONVI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LICHCONGTAC_GETTENDONVIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHop_TimKiemVanBan_InputMessage">
+    <wsdl:part name="parameters" element="tns:LichHop_TimKiemVanBan" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHop_TimKiemVanBan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LichHop_TimKiemVanBanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_Ins" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_List" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_GetByLichHenID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_GetByLichHenID" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_GetByLichHenID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_GetByLichHenIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_ListLanhDao_InputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_ListLanhDao" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_ListLanhDao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_ListLanhDaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_UpdateHoanTat_InputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_UpdateHoanTat" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_UpdateHoanTat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_UpdateHoanTatResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_UpdateHuy_InputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_UpdateHuy" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_UpdateHuy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_UpdateHuyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_ThongKe_InputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_ThongKe" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LichHen_ThongKe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LichHen_ThongKeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LoadDanhSachGioLamViec_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDanhSachGioLamViec" />
+  </wsdl:message>
+  <wsdl:message name="ILCTService_LoadDanhSachGioLamViec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDanhSachGioLamViecResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILCTService">
+    <wsdl:operation name="lstChucVu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/lstChucVu" message="tns:ILCTService_lstChucVu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/lstChucVuResponse" message="tns:ILCTService_lstChucVu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DMCHUCVU_LstByChucVuID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/DMCHUCVU_LstByChucVuID" message="tns:ILCTService_DMCHUCVU_LstByChucVuID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/DMCHUCVU_LstByChucVuIDResponse" message="tns:ILCTService_DMCHUCVU_LstByChucVuID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="lstDonVi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/lstDonVi" message="tns:ILCTService_lstDonVi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/lstDonViResponse" message="tns:ILCTService_lstDonVi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="lstDMVaiTroThamDu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/lstDMVaiTroThamDu" message="tns:ILCTService_lstDMVaiTroThamDu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/lstDMVaiTroThamDuResponse" message="tns:ILCTService_lstDMVaiTroThamDu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="lstDMThanhPhanThamDu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/lstDMThanhPhanThamDu" message="tns:ILCTService_lstDMThanhPhanThamDu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/lstDMThanhPhanThamDuResponse" message="tns:ILCTService_lstDMThanhPhanThamDu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DanhMucThanhPhanThamDu_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/DanhMucThanhPhanThamDu_Ins" message="tns:ILCTService_DanhMucThanhPhanThamDu_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/DanhMucThanhPhanThamDu_InsResponse" message="tns:ILCTService_DanhMucThanhPhanThamDu_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DanhMucThanhPhanThamDu_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/DanhMucThanhPhanThamDu_Upd" message="tns:ILCTService_DanhMucThanhPhanThamDu_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/DanhMucThanhPhanThamDu_UpdResponse" message="tns:ILCTService_DanhMucThanhPhanThamDu_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="lstDMNhomLichCongTac">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/lstDMNhomLichCongTac" message="tns:ILCTService_lstDMNhomLichCongTac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/lstDMNhomLichCongTacResponse" message="tns:ILCTService_lstDMNhomLichCongTac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VaiTroThamDu_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/VaiTroThamDu_Ins" message="tns:ILCTService_VaiTroThamDu_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/VaiTroThamDu_InsResponse" message="tns:ILCTService_VaiTroThamDu_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VaiTroThamDu_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/VaiTroThamDu_Lst" message="tns:ILCTService_VaiTroThamDu_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/VaiTroThamDu_LstResponse" message="tns:ILCTService_VaiTroThamDu_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VaiTroThamDu_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/VaiTroThamDu_Del" message="tns:ILCTService_VaiTroThamDu_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/VaiTroThamDu_DelResponse" message="tns:ILCTService_VaiTroThamDu_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThanhPhanThamDu_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/ThanhPhanThamDu_Ins" message="tns:ILCTService_ThanhPhanThamDu_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/ThanhPhanThamDu_InsResponse" message="tns:ILCTService_ThanhPhanThamDu_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThanhPhanThamDu_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/ThanhPhanThamDu_Lst" message="tns:ILCTService_ThanhPhanThamDu_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/ThanhPhanThamDu_LstResponse" message="tns:ILCTService_ThanhPhanThamDu_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThanhPhanThamDu_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/ThanhPhanThamDu_Del" message="tns:ILCTService_ThanhPhanThamDu_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/ThanhPhanThamDu_DelResponse" message="tns:ILCTService_ThanhPhanThamDu_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhomLichCongTac_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/NhomLichCongTac_Ins" message="tns:ILCTService_NhomLichCongTac_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/NhomLichCongTac_InsResponse" message="tns:ILCTService_NhomLichCongTac_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhomLichCongTac_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/NhomLichCongTac_Lst" message="tns:ILCTService_NhomLichCongTac_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/NhomLichCongTac_LstResponse" message="tns:ILCTService_NhomLichCongTac_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NhomLichCongTac_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/NhomLichCongTac_Del" message="tns:ILCTService_NhomLichCongTac_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/NhomLichCongTac_DelResponse" message="tns:ILCTService_NhomLichCongTac_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_Lst_VaiTro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/CANBO_Lst_VaiTro" message="tns:ILCTService_CANBO_Lst_VaiTro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/CANBO_Lst_VaiTroResponse" message="tns:ILCTService_CANBO_Lst_VaiTro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_LstAllVaiTro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/CANBO_LstAllVaiTro" message="tns:ILCTService_CANBO_LstAllVaiTro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/CANBO_LstAllVaiTroResponse" message="tns:ILCTService_CANBO_LstAllVaiTro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DMPhongHop_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/DMPhongHop_Lst" message="tns:ILCTService_DMPhongHop_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/DMPhongHop_LstResponse" message="tns:ILCTService_DMPhongHop_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_Ins" message="tns:ILCTService_LICHCONGTAC_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_InsResponse" message="tns:ILCTService_LICHCONGTAC_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_Upd" message="tns:ILCTService_LICHCONGTAC_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_UpdResponse" message="tns:ILCTService_LICHCONGTAC_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LANHDAOTHAMGIA_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_Ins" message="tns:ILCTService_LANHDAOTHAMGIA_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_InsResponse" message="tns:ILCTService_LANHDAOTHAMGIA_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_Lst" message="tns:ILCTService_LICHCONGTAC_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_LstResponse" message="tns:ILCTService_LICHCONGTAC_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_LstUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_LstUpdate" message="tns:ILCTService_LICHCONGTAC_LstUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_LstUpdateResponse" message="tns:ILCTService_LICHCONGTAC_LstUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_LstDuyet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_LstDuyet" message="tns:ILCTService_LICHCONGTAC_LstDuyet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_LstDuyetResponse" message="tns:ILCTService_LICHCONGTAC_LstDuyet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_LstPhatHanh">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_LstPhatHanh" message="tns:ILCTService_LICHCONGTAC_LstPhatHanh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_LstPhatHanhResponse" message="tns:ILCTService_LICHCONGTAC_LstPhatHanh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_Search" message="tns:ILCTService_LICHCONGTAC_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_SearchResponse" message="tns:ILCTService_LICHCONGTAC_Search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetByLichCongTacID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetByLichCongTacID" message="tns:ILCTService_LICHCONGTAC_GetByLichCongTacID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetByLichCongTacIDResponse" message="tns:ILCTService_LICHCONGTAC_GetByLichCongTacID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LANHDAOTHAMGIA_GetByLichCongTacID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_GetByLichCongTacID" message="tns:ILCTService_LANHDAOTHAMGIA_GetByLichCongTacID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_GetByLichCongTacIDResponse" message="tns:ILCTService_LANHDAOTHAMGIA_GetByLichCongTacID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_DelByLichCongTacID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_DelByLichCongTacID" message="tns:ILCTService_LICHCONGTAC_DelByLichCongTacID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_DelByLichCongTacIDResponse" message="tns:ILCTService_LICHCONGTAC_DelByLichCongTacID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LANHDAOTHAMGIA_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_Del" message="tns:ILCTService_LANHDAOTHAMGIA_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_DelResponse" message="tns:ILCTService_LANHDAOTHAMGIA_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FILEDINHKEM_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/FILEDINHKEM_Ins" message="tns:ILCTService_FILEDINHKEM_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/FILEDINHKEM_InsResponse" message="tns:ILCTService_FILEDINHKEM_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FILEDINHKEM_Get">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/FILEDINHKEM_Get" message="tns:ILCTService_FILEDINHKEM_Get_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/FILEDINHKEM_GetResponse" message="tns:ILCTService_FILEDINHKEM_Get_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FILEDINHKEM_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/FILEDINHKEM_Del" message="tns:ILCTService_FILEDINHKEM_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/FILEDINHKEM_DelResponse" message="tns:ILCTService_FILEDINHKEM_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LANHDAOTHAMGIA_GetThanhPhanThamDu">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_GetThanhPhanThamDu" message="tns:ILCTService_LANHDAOTHAMGIA_GetThanhPhanThamDu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_GetThanhPhanThamDuResponse" message="tns:ILCTService_LANHDAOTHAMGIA_GetThanhPhanThamDu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="THANHPHANTHAMDU_LstByDonViID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/THANHPHANTHAMDU_LstByDonViID" message="tns:ILCTService_THANHPHANTHAMDU_LstByDonViID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/THANHPHANTHAMDU_LstByDonViIDResponse" message="tns:ILCTService_THANHPHANTHAMDU_LstByDonViID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_NhomLanhDao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/Get_NhomLanhDao" message="tns:ILCTService_Get_NhomLanhDao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/Get_NhomLanhDaoResponse" message="tns:ILCTService_Get_NhomLanhDao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NHOMLICHCONGTAC_LstByDonViID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/NHOMLICHCONGTAC_LstByDonViID" message="tns:ILCTService_NHOMLICHCONGTAC_LstByDonViID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/NHOMLICHCONGTAC_LstByDonViIDResponse" message="tns:ILCTService_NHOMLICHCONGTAC_LstByDonViID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_TV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_TV" message="tns:ILCTService_LICHCONGTAC_TV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_TVResponse" message="tns:ILCTService_LICHCONGTAC_TV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_SnapShort">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_SnapShort" message="tns:ILCTService_LICHCONGTAC_SnapShort_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_SnapShortResponse" message="tns:ILCTService_LICHCONGTAC_SnapShort_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="THANHPHANTHAMDU_LstVaiTro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/THANHPHANTHAMDU_LstVaiTro" message="tns:ILCTService_THANHPHANTHAMDU_LstVaiTro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/THANHPHANTHAMDU_LstVaiTroResponse" message="tns:ILCTService_THANHPHANTHAMDU_LstVaiTro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_SnapShort_CaNhan">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_SnapShort_CaNhan" message="tns:ILCTService_LICHCONGTAC_SnapShort_CaNhan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_SnapShort_CaNhanResponse" message="tns:ILCTService_LICHCONGTAC_SnapShort_CaNhan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_lstCanBoThamGia">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_lstCanBoThamGia" message="tns:ILCTService_LICHCONGTAC_lstCanBoThamGia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_lstCanBoThamGiaResponse" message="tns:ILCTService_LICHCONGTAC_lstCanBoThamGia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetWeekDuyetLich">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetWeekDuyetLich" message="tns:ILCTService_LICHCONGTAC_GetWeekDuyetLich_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetWeekDuyetLichResponse" message="tns:ILCTService_LICHCONGTAC_GetWeekDuyetLich_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetMonthDuyetLich">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetMonthDuyetLich" message="tns:ILCTService_LICHCONGTAC_GetMonthDuyetLich_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetMonthDuyetLichResponse" message="tns:ILCTService_LICHCONGTAC_GetMonthDuyetLich_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetWeekPhatHanhLich">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetWeekPhatHanhLich" message="tns:ILCTService_LICHCONGTAC_GetWeekPhatHanhLich_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetWeekPhatHanhLichResponse" message="tns:ILCTService_LICHCONGTAC_GetWeekPhatHanhLich_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetMonthPhatHanhLich">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetMonthPhatHanhLich" message="tns:ILCTService_LICHCONGTAC_GetMonthPhatHanhLich_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GetMonthPhatHanhLichResponse" message="tns:ILCTService_LICHCONGTAC_GetMonthPhatHanhLich_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_UpdDuyet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_UpdDuyet" message="tns:ILCTService_LICHCONGTAC_UpdDuyet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_UpdDuyetResponse" message="tns:ILCTService_LICHCONGTAC_UpdDuyet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_UpdPhatHanh">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_UpdPhatHanh" message="tns:ILCTService_LICHCONGTAC_UpdPhatHanh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_UpdPhatHanhResponse" message="tns:ILCTService_LICHCONGTAC_UpdPhatHanh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="E_LOAILICH_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/E_LOAILICH_Lst" message="tns:ILCTService_E_LOAILICH_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/E_LOAILICH_LstResponse" message="tns:ILCTService_E_LOAILICH_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HC_LICHCANHAN_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/HC_LICHCANHAN_Ins" message="tns:ILCTService_HC_LICHCANHAN_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/HC_LICHCANHAN_InsResponse" message="tns:ILCTService_HC_LICHCANHAN_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HC_LICHCANHAN_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/HC_LICHCANHAN_Upd" message="tns:ILCTService_HC_LICHCANHAN_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/HC_LICHCANHAN_UpdResponse" message="tns:ILCTService_HC_LICHCANHAN_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HC_LICHCANHAN_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/HC_LICHCANHAN_Del" message="tns:ILCTService_HC_LICHCANHAN_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/HC_LICHCANHAN_DelResponse" message="tns:ILCTService_HC_LICHCANHAN_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HC_LICHCANHAN_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/HC_LICHCANHAN_Lst" message="tns:ILCTService_HC_LICHCANHAN_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/HC_LICHCANHAN_LstResponse" message="tns:ILCTService_HC_LICHCANHAN_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HC_DMLOAILICHCANHAN_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/HC_DMLOAILICHCANHAN_Lst" message="tns:ILCTService_HC_DMLOAILICHCANHAN_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/HC_DMLOAILICHCANHAN_LstResponse" message="tns:ILCTService_HC_DMLOAILICHCANHAN_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_UpdShowTV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_UpdShowTV" message="tns:ILCTService_LICHCONGTAC_UpdShowTV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_UpdShowTVResponse" message="tns:ILCTService_LICHCONGTAC_UpdShowTV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GETTENDONVI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GETTENDONVI" message="tns:ILCTService_LICHCONGTAC_GETTENDONVI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LICHCONGTAC_GETTENDONVIResponse" message="tns:ILCTService_LICHCONGTAC_GETTENDONVI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LichHop_TimKiemVanBan">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LichHop_TimKiemVanBan" message="tns:ILCTService_LichHop_TimKiemVanBan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LichHop_TimKiemVanBanResponse" message="tns:ILCTService_LichHop_TimKiemVanBan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LichHen_Ins" message="tns:ILCTService_LichHen_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LichHen_InsResponse" message="tns:ILCTService_LichHen_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_List">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LichHen_List" message="tns:ILCTService_LichHen_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LichHen_ListResponse" message="tns:ILCTService_LichHen_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_GetByLichHenID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LichHen_GetByLichHenID" message="tns:ILCTService_LichHen_GetByLichHenID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LichHen_GetByLichHenIDResponse" message="tns:ILCTService_LichHen_GetByLichHenID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_ListLanhDao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LichHen_ListLanhDao" message="tns:ILCTService_LichHen_ListLanhDao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LichHen_ListLanhDaoResponse" message="tns:ILCTService_LichHen_ListLanhDao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_UpdateHoanTat">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LichHen_UpdateHoanTat" message="tns:ILCTService_LichHen_UpdateHoanTat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LichHen_UpdateHoanTatResponse" message="tns:ILCTService_LichHen_UpdateHoanTat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_UpdateHuy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LichHen_UpdateHuy" message="tns:ILCTService_LichHen_UpdateHuy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LichHen_UpdateHuyResponse" message="tns:ILCTService_LichHen_UpdateHuy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_ThongKe">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LichHen_ThongKe" message="tns:ILCTService_LichHen_ThongKe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LichHen_ThongKeResponse" message="tns:ILCTService_LichHen_ThongKe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDanhSachGioLamViec">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCTService/LoadDanhSachGioLamViec" message="tns:ILCTService_LoadDanhSachGioLamViec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCTService/LoadDanhSachGioLamViecResponse" message="tns:ILCTService_LoadDanhSachGioLamViec_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicHttpLCTService" type="tns:ILCTService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="lstChucVu">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/lstChucVu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DMCHUCVU_LstByChucVuID">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/DMCHUCVU_LstByChucVuID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lstDonVi">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/lstDonVi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lstDMVaiTroThamDu">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/lstDMVaiTroThamDu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lstDMThanhPhanThamDu">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/lstDMThanhPhanThamDu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DanhMucThanhPhanThamDu_Ins">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/DanhMucThanhPhanThamDu_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DanhMucThanhPhanThamDu_Upd">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/DanhMucThanhPhanThamDu_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lstDMNhomLichCongTac">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/lstDMNhomLichCongTac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VaiTroThamDu_Ins">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/VaiTroThamDu_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VaiTroThamDu_Lst">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/VaiTroThamDu_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VaiTroThamDu_Del">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/VaiTroThamDu_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThanhPhanThamDu_Ins">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/ThanhPhanThamDu_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThanhPhanThamDu_Lst">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/ThanhPhanThamDu_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThanhPhanThamDu_Del">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/ThanhPhanThamDu_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NhomLichCongTac_Ins">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/NhomLichCongTac_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NhomLichCongTac_Lst">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/NhomLichCongTac_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NhomLichCongTac_Del">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/NhomLichCongTac_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_Lst_VaiTro">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/CANBO_Lst_VaiTro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_LstAllVaiTro">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/CANBO_LstAllVaiTro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DMPhongHop_Lst">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/DMPhongHop_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_Ins">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_Upd">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LANHDAOTHAMGIA_Ins">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_Lst">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_LstUpdate">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_LstUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_LstDuyet">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_LstDuyet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_LstPhatHanh">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_LstPhatHanh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_Search">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetByLichCongTacID">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_GetByLichCongTacID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LANHDAOTHAMGIA_GetByLichCongTacID">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_GetByLichCongTacID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_DelByLichCongTacID">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_DelByLichCongTacID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LANHDAOTHAMGIA_Del">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FILEDINHKEM_Ins">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/FILEDINHKEM_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FILEDINHKEM_Get">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/FILEDINHKEM_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FILEDINHKEM_Del">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/FILEDINHKEM_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LANHDAOTHAMGIA_GetThanhPhanThamDu">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LANHDAOTHAMGIA_GetThanhPhanThamDu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="THANHPHANTHAMDU_LstByDonViID">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/THANHPHANTHAMDU_LstByDonViID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_NhomLanhDao">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/Get_NhomLanhDao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NHOMLICHCONGTAC_LstByDonViID">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/NHOMLICHCONGTAC_LstByDonViID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_TV">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_TV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_SnapShort">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_SnapShort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="THANHPHANTHAMDU_LstVaiTro">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/THANHPHANTHAMDU_LstVaiTro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_SnapShort_CaNhan">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_SnapShort_CaNhan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_lstCanBoThamGia">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_lstCanBoThamGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetWeekDuyetLich">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_GetWeekDuyetLich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetMonthDuyetLich">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_GetMonthDuyetLich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetWeekPhatHanhLich">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_GetWeekPhatHanhLich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GetMonthPhatHanhLich">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_GetMonthPhatHanhLich" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_UpdDuyet">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_UpdDuyet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_UpdPhatHanh">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_UpdPhatHanh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="E_LOAILICH_Lst">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/E_LOAILICH_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HC_LICHCANHAN_Ins">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/HC_LICHCANHAN_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HC_LICHCANHAN_Upd">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/HC_LICHCANHAN_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HC_LICHCANHAN_Del">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/HC_LICHCANHAN_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HC_LICHCANHAN_Lst">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/HC_LICHCANHAN_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HC_DMLOAILICHCANHAN_Lst">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/HC_DMLOAILICHCANHAN_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_UpdShowTV">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_UpdShowTV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LICHCONGTAC_GETTENDONVI">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LICHCONGTAC_GETTENDONVI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LichHop_TimKiemVanBan">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LichHop_TimKiemVanBan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_Ins">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LichHen_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_List">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LichHen_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_GetByLichHenID">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LichHen_GetByLichHenID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_ListLanhDao">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LichHen_ListLanhDao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_UpdateHoanTat">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LichHen_UpdateHoanTat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_UpdateHuy">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LichHen_UpdateHuy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LichHen_ThongKe">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LichHen_ThongKe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDanhSachGioLamViec">
+      <soap:operation soapAction="http://tempuri.org/ILCTService/LoadDanhSachGioLamViec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LCTService">
+    <wsdl:port name="basicHttpLCTService" binding="tns:basicHttpLCTService">
+      <soap:address location="http://localhost:8091/HanhChinh/LCTService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

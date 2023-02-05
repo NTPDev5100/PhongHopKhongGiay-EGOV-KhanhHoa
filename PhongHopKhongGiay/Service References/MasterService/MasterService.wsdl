@@ -1,0 +1,2970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MasterService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" />
+      <xsd:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DungChung.Entities.OrmLiteDomain.Master" />
+      <xsd:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DungChung.Entities.Models" />
+      <xsd:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/DungChung.Entities" />
+      <xsd:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/DungChung.Entities.OrmLiteDomain.HanhChinh" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMasterService_SetEmailSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetEmailSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetKioskSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKioskSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetKioskSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKioskSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetKioskSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetKioskSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetKioskSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetKioskSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetLdapSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLdapSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetLdapSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLdapSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetLdapSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetLdapSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetLdapSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetLdapSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetCommonSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommonSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetCommonSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommonSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetCommonSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCommonSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetCommonSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCommonSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetWgGopYSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWgGopYSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetWgGopYSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWgGopYSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetWgGopYSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetWgGopYSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetWgGopYSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetWgGopYSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetSlideLichCongTacSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSlideLichCongTacSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetSlideLichCongTacSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSlideLichCongTacSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetSlideLichCongTacSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSlideLichCongTacSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetSlideLichCongTacSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSlideLichCongTacSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetDsDonViNganh_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDsDonViNganh" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetDsDonViNganh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDsDonViNganhResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetDsDonViNganhModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDsDonViNganhModel" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetDsDonViNganhModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDsDonViNganhModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SaveDonViNganh_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDonViNganh" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SaveDonViNganh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDonViNganhResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UpdateThuTucHanhChinhDonVi_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateThuTucHanhChinhDonVi" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UpdateThuTucHanhChinhDonVi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateThuTucHanhChinhDonViResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_InsThuTucHanhChinhDonVi_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsThuTucHanhChinhDonVi" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_InsThuTucHanhChinhDonVi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsThuTucHanhChinhDonViResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CheckExistThuTucHanhChinhDonVi_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckExistThuTucHanhChinhDonVi" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CheckExistThuTucHanhChinhDonVi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckExistThuTucHanhChinhDonViResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GethuTucHanhChinhDonViByConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GethuTucHanhChinhDonViByConditions" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GethuTucHanhChinhDonViByConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GethuTucHanhChinhDonViByConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LoadDataVaiTroChucVu_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDataVaiTroChucVu" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LoadDataVaiTroChucVu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDataVaiTroChucVuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_VAITROINANHETHONG_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:E_VAITROINANHETHONG_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_VAITROINANHETHONG_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:E_VAITROINANHETHONG_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CheckExists_E_VAITROINANHETHONG_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckExists_E_VAITROINANHETHONG" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CheckExists_E_VAITROINANHETHONG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckExists_E_VAITROINANHETHONGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LayDanhMucInAnTheoPhanQuyen_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhMucInAnTheoPhanQuyen" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LayDanhMucInAnTheoPhanQuyen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayDanhMucInAnTheoPhanQuyenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_PHANQUYEN_BAOCAO_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_PHANQUYEN_BAOCAO" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_PHANQUYEN_BAOCAO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_PHANQUYEN_BAOCAOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetAllDanhMucInAn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDanhMucInAn" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetAllDanhMucInAn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDanhMucInAnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetListTheoTenVietTat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListTheoTenVietTat" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetListTheoTenVietTat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListTheoTenVietTatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_ThongBaoBaoTriGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThongBaoBaoTriGet" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_ThongBaoBaoTriGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThongBaoBaoTriGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DanhSachPhimTatDaDinhNghia_InputMessage">
+    <wsdl:part name="parameters" element="tns:DanhSachPhimTatDaDinhNghia" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DanhSachPhimTatDaDinhNghia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DanhSachPhimTatDaDinhNghiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LIENKETNGOAI_ListByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LIENKETNGOAI_ListByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LIENKETNGOAI_ListByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LIENKETNGOAI_ListByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LIENKETNGOAI_GetbyChucNang_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LIENKETNGOAI_GetbyChucNang" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LIENKETNGOAI_GetbyChucNang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LIENKETNGOAI_GetbyChucNangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LIENKETNGOAI_ListChucNang_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LIENKETNGOAI_ListChucNang" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LIENKETNGOAI_ListChucNang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LIENKETNGOAI_ListChucNangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CANBO_DONVI_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_DONVI_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CANBO_DONVI_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_DONVI_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CANBO_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CANBO_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_Del" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_CHUCDANH_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_CHUCDANH_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_CHUCDANH_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_CHUCDANH_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_CHUCVU_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_CHUCVU_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_CHUCVU_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_CHUCVU_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DANTOC_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DANTOC_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DANTOC_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DANTOC_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_LstDropTreeView_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_LstDropTreeView" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_LstDropTreeView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_LstDropTreeViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SelectListDonVi_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectListDonVi" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SelectListDonVi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectListDonViResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_ByCAP01_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_ByCAP01" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_ByCAP01_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_ByCAP01Response" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DUONG_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DUONG_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DUONG_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DUONG_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetThongTinHeThongById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetThongTinHeThongById" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetThongTinHeThongById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetThongTinHeThongByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_Update" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_DeleteByHeThongID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_DeleteByHeThongID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_HETHONG_DeleteByHeThongID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_HETHONG_DeleteByHeThongIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_LINHVUC_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_LINHVUC_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_LINHVUC_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_LINHVUC_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_LOAIGIAYTO_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_LOAIGIAYTO_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_LOAIGIAYTO_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_LOAIGIAYTO_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_NHOMDANTOC_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_NHOMDANTOC_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_NHOMDANTOC_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_NHOMDANTOC_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_NHOMTHUTUC_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_NHOMTHUTUC_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_NHOMTHUTUC_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_NHOMTHUTUC_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_PHUONGXA_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_PHUONGXA_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_PHUONGXA_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_PHUONGXA_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_QUANHUYEN_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_QUANHUYEN_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_QUANHUYEN_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_QUANHUYEN_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_QUOCGIA_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_QUOCGIA_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_QUOCGIA_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_QUOCGIA_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_THUTUCHANHCHINH_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_THUTUCHANHCHINH_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_THUTUCHANHCHINH_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_THUTUCHANHCHINH_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_TINHTHANH_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_TINHTHANH_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_TINHTHANH_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_TINHTHANH_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_TONGIAO_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_TONGIAO_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_TONGIAO_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_TONGIAO_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_TRINHDO_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_TRINHDO_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_TRINHDO_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_TRINHDO_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DOANHNGHIEP_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOANHNGHIEP_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DOANHNGHIEP_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOANHNGHIEP_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DOANHNGHIEP_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOANHNGHIEP_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DOANHNGHIEP_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOANHNGHIEP_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DOANHNGHIEP_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOANHNGHIEP_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DOANHNGHIEP_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOANHNGHIEP_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DOANHNGHIEP_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOANHNGHIEP_Del" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DOANHNGHIEP_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOANHNGHIEP_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_HETHONG_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_HETHONG_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_HETHONG_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_HETHONG_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_DONVI_DeleteByDonViID_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_DONVI_DeleteByDonViID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_DONVI_DeleteByDonViID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_DONVI_DeleteByDonViIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_HETHONG_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_HETHONG_Update" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_HETHONG_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_HETHONG_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_HETHONG_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_HETHONG_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_HETHONG_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_HETHONG_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_HETHONG_UpdateByDonViID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_HETHONG_UpdateByDonViID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_HETHONG_UpdateByDonViID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_HETHONG_UpdateByDonViIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_CAPHANHCHINH_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:E_CAPHANHCHINH_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_CAPHANHCHINH_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:E_CAPHANHCHINH_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GIAYTOTUYTHAN_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:GIAYTOTUYTHAN_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GIAYTOTUYTHAN_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GIAYTOTUYTHAN_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GIAYTOTUYTHAN_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:GIAYTOTUYTHAN_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GIAYTOTUYTHAN_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GIAYTOTUYTHAN_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GIAYTOTUYTHAN_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GIAYTOTUYTHAN_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GIAYTOTUYTHAN_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GIAYTOTUYTHAN_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_LOAIDONVI_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:E_LOAIDONVI_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_LOAIDONVI_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:E_LOAIDONVI_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LINHVUC_DONVI_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:LINHVUC_DONVI_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LINHVUC_DONVI_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LINHVUC_DONVI_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LINHVUC_USER_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:LINHVUC_USER_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LINHVUC_USER_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LINHVUC_USER_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_Lst_isPhongBan_InputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_Lst_isPhongBan" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_Lst_isPhongBan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_Lst_isPhongBanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetUserByDonViID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByDonViID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetUserByDonViID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByDonViIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetUserByUserIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserIds" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetUserByUserIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DUONG_PHUONG_QUAN_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DUONG_PHUONG_QUAN_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DUONG_PHUONG_QUAN_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DUONG_PHUONG_QUAN_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_GIAYTOTUYTHAN_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_GIAYTOTUYTHAN_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CONNGUOI_GIAYTOTUYTHAN_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CONNGUOI_GIAYTOTUYTHAN_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetUserByCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByCondition" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetUserByCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetUserByRoleID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByRoleID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetUserByRoleID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByRoleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetRoleByCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleByCondition" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetRoleByCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleByConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetPhongBanIDByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhongBanIDByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetPhongBanIDByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhongBanIDByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CANBO_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CANBO_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CANBO_DONVI_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_DONVI_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CANBO_DONVI_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CANBO_DONVI_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_LstByOU_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_LstByOU" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_LstByOU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_LstByOUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_LstById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_LstById" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_LstById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_LstByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_InsertRelateMasterDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRelateMasterDB" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_InsertRelateMasterDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRelateMasterDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_UpdCanBo_InputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_UpdCanBo" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_UpdCanBo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_UpdCanBoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_CAPDONVI_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:E_CAPDONVI_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_CAPDONVI_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:E_CAPDONVI_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_Search" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_GetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_GetByID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_GetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_GetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_Del" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DONVI_LDAP_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DONVI_LDAP_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_Del" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_LstByDonViCapCha_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_LstByDonViCapCha" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_LstByDonViCapCha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_LstByDonViCapChaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_Del" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LINHVUC_DONVI_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:LINHVUC_DONVI_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LINHVUC_DONVI_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LINHVUC_DONVI_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LINHVUC_DONVI_Del_ByDonViID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LINHVUC_DONVI_Del_ByDonViID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_LINHVUC_DONVI_Del_ByDonViID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LINHVUC_DONVI_Del_ByDonViIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_LINHVUC_GetByDonViID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_LINHVUC_GetByDonViID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_LINHVUC_GetByDonViID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_LINHVUC_GetByDonViIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_THAMSO_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:THAMSO_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_THAMSO_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:THAMSO_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_THAMSO_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:THAMSO_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_THAMSO_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:THAMSO_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetSettingCauHinhLichCongTac_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingCauHinhLichCongTac" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetSettingCauHinhLichCongTac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingCauHinhLichCongTacResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SaveSettingLCT_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSettingLCT" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SaveSettingLCT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSettingLCTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_THAMSO_ByName_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:THAMSO_ByName_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_THAMSO_ByName_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:THAMSO_ByName_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UserRoles_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRoles_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UserRoles_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRoles_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UserRole_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRole_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UserRole_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRole_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_RoleGroup_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleGroup_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_RoleGroup_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleGroup_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetPhongBanByDonViId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhongBanByDonViId" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetPhongBanByDonViId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhongBanByDonViIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HasAdminRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:HasAdminRole" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HasAdminRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HasAdminRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetQuanLyDonViRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuanLyDonViRole" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetQuanLyDonViRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuanLyDonViRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetDonViByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDonViByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetDonViByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDonViByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetQuanLyHeThongRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuanLyHeThongRole" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetQuanLyHeThongRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuanLyHeThongRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_ROLE_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:ROLE_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_ROLE_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ROLE_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UserRoles_GetRolesByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRoles_GetRolesByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UserRoles_GetRolesByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRoles_GetRolesByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_Get_THONGTINCANBO_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_THONGTINCANBO" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_Get_THONGTINCANBO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_THONGTINCANBOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_THONGTINCANBO_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:THONGTINCANBO_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_THONGTINCANBO_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:THONGTINCANBO_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_NGUOIDUNG_Update_Image_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_NGUOIDUNG_Update_Image" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_NGUOIDUNG_Update_Image_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_NGUOIDUNG_Update_ImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_NGUOIDUNG_Get_Image_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_NGUOIDUNG_Get_Image" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DM_DONVI_NGUOIDUNG_Get_Image_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DONVI_NGUOIDUNG_Get_ImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_LOAICANHAN_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:E_LOAICANHAN_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_LOAICANHAN_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:E_LOAICANHAN_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LINHVUC__SelectByHeThongID_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LINHVUC__SelectByHeThongID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LINHVUC__SelectByHeThongID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LINHVUC__SelectByHeThongIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LINHVUC_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LINHVUC_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LINHVUC_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LINHVUC_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LINHVUC_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LINHVUC_Update" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_LINHVUC_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_LINHVUC_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_SelectByHeThongID_InputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_SelectByHeThongID" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_HETHONG_ROLEGROUP_SelectByHeThongID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HETHONG_ROLEGROUP_SelectByHeThongIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_LOAIHETHONG_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:E_LOAIHETHONG_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_E_LOAIHETHONG_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:E_LOAIHETHONG_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_ListThuTucHanhChinhDonVi_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListThuTucHanhChinhDonVi" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_ListThuTucHanhChinhDonVi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListThuTucHanhChinhDonViResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GethuTucHanhChinhDonViById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GethuTucHanhChinhDonViById" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GethuTucHanhChinhDonViById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GethuTucHanhChinhDonViByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_LstThayDoi_InputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_LstThayDoi" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_LstThayDoi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_LstThayDoiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_LstCanBo_InputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_LstCanBo" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_USER_MASTER_LstCanBo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:USER_MASTER_LstCanBoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CheckDonViInQLVB_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDonViInQLVB" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_CheckDonViInQLVB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDonViInQLVBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SearchConNguoi_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchConNguoi" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SearchConNguoi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchConNguoiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SearchPhatHanh_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPhatHanh" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SearchPhatHanh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPhatHanhResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UpdatePhatHanh_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhatHanh" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_UpdatePhatHanh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhatHanhResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DonViByCap_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonViByCap" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DonViByCap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonViByCapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DonViByDonViCapCha_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonViByDonViCapCha" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DonViByDonViCapCha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonViByDonViCapChaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DonViInUserMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonViInUserMaster" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_DonViInUserMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonViInUserMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetDonViById_Lst_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDonViById_Lst" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetDonViById_Lst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDonViById_LstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetZimbraSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZimbraSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetZimbraSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZimbraSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetZimbraSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetZimbraSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetZimbraSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetZimbraSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetAlfrescoSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlfrescoSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetAlfrescoSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlfrescoSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetAlfrescoSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAlfrescoSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_SetAlfrescoSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAlfrescoSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetEmailSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailSetting" />
+  </wsdl:message>
+  <wsdl:message name="IMasterService_GetEmailSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailSettingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMasterService">
+    <wsdl:operation name="SetEmailSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SetEmailSetting" message="tns:IMasterService_SetEmailSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SetEmailSettingResponse" message="tns:IMasterService_SetEmailSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKioskSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetKioskSetting" message="tns:IMasterService_GetKioskSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetKioskSettingResponse" message="tns:IMasterService_GetKioskSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetKioskSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SetKioskSetting" message="tns:IMasterService_SetKioskSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SetKioskSettingResponse" message="tns:IMasterService_SetKioskSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLdapSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetLdapSetting" message="tns:IMasterService_GetLdapSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetLdapSettingResponse" message="tns:IMasterService_GetLdapSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLdapSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SetLdapSetting" message="tns:IMasterService_SetLdapSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SetLdapSettingResponse" message="tns:IMasterService_SetLdapSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommonSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetCommonSetting" message="tns:IMasterService_GetCommonSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetCommonSettingResponse" message="tns:IMasterService_GetCommonSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCommonSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SetCommonSetting" message="tns:IMasterService_SetCommonSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SetCommonSettingResponse" message="tns:IMasterService_SetCommonSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWgGopYSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetWgGopYSetting" message="tns:IMasterService_GetWgGopYSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetWgGopYSettingResponse" message="tns:IMasterService_GetWgGopYSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWgGopYSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SetWgGopYSetting" message="tns:IMasterService_SetWgGopYSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SetWgGopYSettingResponse" message="tns:IMasterService_SetWgGopYSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSlideLichCongTacSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetSlideLichCongTacSetting" message="tns:IMasterService_GetSlideLichCongTacSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetSlideLichCongTacSettingResponse" message="tns:IMasterService_GetSlideLichCongTacSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSlideLichCongTacSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SetSlideLichCongTacSetting" message="tns:IMasterService_SetSlideLichCongTacSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SetSlideLichCongTacSettingResponse" message="tns:IMasterService_SetSlideLichCongTacSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDsDonViNganh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetDsDonViNganh" message="tns:IMasterService_GetDsDonViNganh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetDsDonViNganhResponse" message="tns:IMasterService_GetDsDonViNganh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDsDonViNganhModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetDsDonViNganhModel" message="tns:IMasterService_GetDsDonViNganhModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetDsDonViNganhModelResponse" message="tns:IMasterService_GetDsDonViNganhModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDonViNganh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SaveDonViNganh" message="tns:IMasterService_SaveDonViNganh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SaveDonViNganhResponse" message="tns:IMasterService_SaveDonViNganh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateThuTucHanhChinhDonVi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/UpdateThuTucHanhChinhDonVi" message="tns:IMasterService_UpdateThuTucHanhChinhDonVi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/UpdateThuTucHanhChinhDonViResponse" message="tns:IMasterService_UpdateThuTucHanhChinhDonVi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsThuTucHanhChinhDonVi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/InsThuTucHanhChinhDonVi" message="tns:IMasterService_InsThuTucHanhChinhDonVi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/InsThuTucHanhChinhDonViResponse" message="tns:IMasterService_InsThuTucHanhChinhDonVi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckExistThuTucHanhChinhDonVi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CheckExistThuTucHanhChinhDonVi" message="tns:IMasterService_CheckExistThuTucHanhChinhDonVi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CheckExistThuTucHanhChinhDonViResponse" message="tns:IMasterService_CheckExistThuTucHanhChinhDonVi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GethuTucHanhChinhDonViByConditions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GethuTucHanhChinhDonViByConditions" message="tns:IMasterService_GethuTucHanhChinhDonViByConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GethuTucHanhChinhDonViByConditionsResponse" message="tns:IMasterService_GethuTucHanhChinhDonViByConditions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDataVaiTroChucVu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/LoadDataVaiTroChucVu" message="tns:IMasterService_LoadDataVaiTroChucVu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/LoadDataVaiTroChucVuResponse" message="tns:IMasterService_LoadDataVaiTroChucVu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="E_VAITROINANHETHONG_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/E_VAITROINANHETHONG_Ins" message="tns:IMasterService_E_VAITROINANHETHONG_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/E_VAITROINANHETHONG_InsResponse" message="tns:IMasterService_E_VAITROINANHETHONG_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckExists_E_VAITROINANHETHONG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CheckExists_E_VAITROINANHETHONG" message="tns:IMasterService_CheckExists_E_VAITROINANHETHONG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CheckExists_E_VAITROINANHETHONGResponse" message="tns:IMasterService_CheckExists_E_VAITROINANHETHONG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhMucInAnTheoPhanQuyen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/LayDanhMucInAnTheoPhanQuyen" message="tns:IMasterService_LayDanhMucInAnTheoPhanQuyen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/LayDanhMucInAnTheoPhanQuyenResponse" message="tns:IMasterService_LayDanhMucInAnTheoPhanQuyen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_PHANQUYEN_BAOCAO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_PHANQUYEN_BAOCAO" message="tns:IMasterService_DM_HETHONG_PHANQUYEN_BAOCAO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_PHANQUYEN_BAOCAOResponse" message="tns:IMasterService_DM_HETHONG_PHANQUYEN_BAOCAO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDanhMucInAn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetAllDanhMucInAn" message="tns:IMasterService_GetAllDanhMucInAn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetAllDanhMucInAnResponse" message="tns:IMasterService_GetAllDanhMucInAn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListTheoTenVietTat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetListTheoTenVietTat" message="tns:IMasterService_GetListTheoTenVietTat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetListTheoTenVietTatResponse" message="tns:IMasterService_GetListTheoTenVietTat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThongBaoBaoTriGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/ThongBaoBaoTriGet" message="tns:IMasterService_ThongBaoBaoTriGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/ThongBaoBaoTriGetResponse" message="tns:IMasterService_ThongBaoBaoTriGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DanhSachPhimTatDaDinhNghia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DanhSachPhimTatDaDinhNghia" message="tns:IMasterService_DanhSachPhimTatDaDinhNghia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DanhSachPhimTatDaDinhNghiaResponse" message="tns:IMasterService_DanhSachPhimTatDaDinhNghia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/Ping" message="tns:IMasterService_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/PingResponse" message="tns:IMasterService_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LIENKETNGOAI_ListByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LIENKETNGOAI_ListByUserID" message="tns:IMasterService_HETHONG_LIENKETNGOAI_ListByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LIENKETNGOAI_ListByUserIDResponse" message="tns:IMasterService_HETHONG_LIENKETNGOAI_ListByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LIENKETNGOAI_GetbyChucNang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LIENKETNGOAI_GetbyChucNang" message="tns:IMasterService_HETHONG_LIENKETNGOAI_GetbyChucNang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LIENKETNGOAI_GetbyChucNangResponse" message="tns:IMasterService_HETHONG_LIENKETNGOAI_GetbyChucNang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LIENKETNGOAI_ListChucNang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LIENKETNGOAI_ListChucNang" message="tns:IMasterService_HETHONG_LIENKETNGOAI_ListChucNang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LIENKETNGOAI_ListChucNangResponse" message="tns:IMasterService_HETHONG_LIENKETNGOAI_ListChucNang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_DONVI_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CANBO_DONVI_Lst" message="tns:IMasterService_CANBO_DONVI_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CANBO_DONVI_LstResponse" message="tns:IMasterService_CANBO_DONVI_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CANBO_Lst" message="tns:IMasterService_CANBO_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CANBO_LstResponse" message="tns:IMasterService_CANBO_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_Lst" message="tns:IMasterService_CONNGUOI_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_LstResponse" message="tns:IMasterService_CONNGUOI_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_Ins" message="tns:IMasterService_CONNGUOI_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_InsResponse" message="tns:IMasterService_CONNGUOI_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_Upd" message="tns:IMasterService_CONNGUOI_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_UpdResponse" message="tns:IMasterService_CONNGUOI_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_Del" message="tns:IMasterService_CONNGUOI_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_DelResponse" message="tns:IMasterService_CONNGUOI_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_CHUCDANH_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_CHUCDANH_Lst" message="tns:IMasterService_DM_CHUCDANH_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_CHUCDANH_LstResponse" message="tns:IMasterService_DM_CHUCDANH_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_CHUCVU_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_CHUCVU_Lst" message="tns:IMasterService_DM_CHUCVU_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_CHUCVU_LstResponse" message="tns:IMasterService_DM_CHUCVU_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DANTOC_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DANTOC_Lst" message="tns:IMasterService_DM_DANTOC_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DANTOC_LstResponse" message="tns:IMasterService_DM_DANTOC_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_Lst" message="tns:IMasterService_DM_DONVI_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_LstResponse" message="tns:IMasterService_DM_DONVI_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_LstDropTreeView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_LstDropTreeView" message="tns:IMasterService_DM_DONVI_LstDropTreeView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_LstDropTreeViewResponse" message="tns:IMasterService_DM_DONVI_LstDropTreeView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectListDonVi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SelectListDonVi" message="tns:IMasterService_SelectListDonVi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SelectListDonViResponse" message="tns:IMasterService_SelectListDonVi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_ByCAP01">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_ByCAP01" message="tns:IMasterService_DM_DONVI_ByCAP01_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_ByCAP01Response" message="tns:IMasterService_DM_DONVI_ByCAP01_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DUONG_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DUONG_Lst" message="tns:IMasterService_DM_DUONG_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DUONG_LstResponse" message="tns:IMasterService_DM_DUONG_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_Lst" message="tns:IMasterService_DM_HETHONG_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_LstResponse" message="tns:IMasterService_DM_HETHONG_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThongTinHeThongById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetThongTinHeThongById" message="tns:IMasterService_GetThongTinHeThongById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetThongTinHeThongByIdResponse" message="tns:IMasterService_GetThongTinHeThongById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_Insert" message="tns:IMasterService_DM_HETHONG_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_InsertResponse" message="tns:IMasterService_DM_HETHONG_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_Update" message="tns:IMasterService_DM_HETHONG_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_UpdateResponse" message="tns:IMasterService_DM_HETHONG_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_DeleteByHeThongID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_DeleteByHeThongID" message="tns:IMasterService_DM_HETHONG_DeleteByHeThongID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_HETHONG_DeleteByHeThongIDResponse" message="tns:IMasterService_DM_HETHONG_DeleteByHeThongID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_LINHVUC_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_LINHVUC_Lst" message="tns:IMasterService_DM_LINHVUC_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_LINHVUC_LstResponse" message="tns:IMasterService_DM_LINHVUC_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_LOAIGIAYTO_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_LOAIGIAYTO_Lst" message="tns:IMasterService_DM_LOAIGIAYTO_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_LOAIGIAYTO_LstResponse" message="tns:IMasterService_DM_LOAIGIAYTO_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_NHOMDANTOC_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_NHOMDANTOC_Lst" message="tns:IMasterService_DM_NHOMDANTOC_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_NHOMDANTOC_LstResponse" message="tns:IMasterService_DM_NHOMDANTOC_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_NHOMTHUTUC_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_NHOMTHUTUC_Lst" message="tns:IMasterService_DM_NHOMTHUTUC_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_NHOMTHUTUC_LstResponse" message="tns:IMasterService_DM_NHOMTHUTUC_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_PHUONGXA_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_PHUONGXA_Lst" message="tns:IMasterService_DM_PHUONGXA_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_PHUONGXA_LstResponse" message="tns:IMasterService_DM_PHUONGXA_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_QUANHUYEN_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_QUANHUYEN_Lst" message="tns:IMasterService_DM_QUANHUYEN_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_QUANHUYEN_LstResponse" message="tns:IMasterService_DM_QUANHUYEN_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_QUOCGIA_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_QUOCGIA_Lst" message="tns:IMasterService_DM_QUOCGIA_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_QUOCGIA_LstResponse" message="tns:IMasterService_DM_QUOCGIA_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_THUTUCHANHCHINH_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_THUTUCHANHCHINH_Lst" message="tns:IMasterService_DM_THUTUCHANHCHINH_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_THUTUCHANHCHINH_LstResponse" message="tns:IMasterService_DM_THUTUCHANHCHINH_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_TINHTHANH_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_TINHTHANH_Lst" message="tns:IMasterService_DM_TINHTHANH_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_TINHTHANH_LstResponse" message="tns:IMasterService_DM_TINHTHANH_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_TONGIAO_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_TONGIAO_Lst" message="tns:IMasterService_DM_TONGIAO_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_TONGIAO_LstResponse" message="tns:IMasterService_DM_TONGIAO_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_TRINHDO_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_TRINHDO_Lst" message="tns:IMasterService_DM_TRINHDO_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_TRINHDO_LstResponse" message="tns:IMasterService_DM_TRINHDO_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOANHNGHIEP_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DOANHNGHIEP_Lst" message="tns:IMasterService_DOANHNGHIEP_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DOANHNGHIEP_LstResponse" message="tns:IMasterService_DOANHNGHIEP_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOANHNGHIEP_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DOANHNGHIEP_Ins" message="tns:IMasterService_DOANHNGHIEP_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DOANHNGHIEP_InsResponse" message="tns:IMasterService_DOANHNGHIEP_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOANHNGHIEP_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DOANHNGHIEP_Upd" message="tns:IMasterService_DOANHNGHIEP_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DOANHNGHIEP_UpdResponse" message="tns:IMasterService_DOANHNGHIEP_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOANHNGHIEP_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DOANHNGHIEP_Del" message="tns:IMasterService_DOANHNGHIEP_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DOANHNGHIEP_DelResponse" message="tns:IMasterService_DOANHNGHIEP_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_HETHONG_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_HETHONG_Lst" message="tns:IMasterService_DONVI_HETHONG_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_HETHONG_LstResponse" message="tns:IMasterService_DONVI_HETHONG_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_DONVI_DeleteByDonViID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_DONVI_DeleteByDonViID" message="tns:IMasterService_HETHONG_DONVI_DeleteByDonViID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_DONVI_DeleteByDonViIDResponse" message="tns:IMasterService_HETHONG_DONVI_DeleteByDonViID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_HETHONG_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_HETHONG_Update" message="tns:IMasterService_DONVI_HETHONG_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_HETHONG_UpdateResponse" message="tns:IMasterService_DONVI_HETHONG_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_HETHONG_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_HETHONG_Insert" message="tns:IMasterService_DONVI_HETHONG_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_HETHONG_InsertResponse" message="tns:IMasterService_DONVI_HETHONG_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_HETHONG_UpdateByDonViID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_HETHONG_UpdateByDonViID" message="tns:IMasterService_DONVI_HETHONG_UpdateByDonViID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_HETHONG_UpdateByDonViIDResponse" message="tns:IMasterService_DONVI_HETHONG_UpdateByDonViID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="E_CAPHANHCHINH_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/E_CAPHANHCHINH_Lst" message="tns:IMasterService_E_CAPHANHCHINH_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/E_CAPHANHCHINH_LstResponse" message="tns:IMasterService_E_CAPHANHCHINH_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GIAYTOTUYTHAN_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GIAYTOTUYTHAN_Ins" message="tns:IMasterService_GIAYTOTUYTHAN_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GIAYTOTUYTHAN_InsResponse" message="tns:IMasterService_GIAYTOTUYTHAN_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GIAYTOTUYTHAN_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GIAYTOTUYTHAN_Upd" message="tns:IMasterService_GIAYTOTUYTHAN_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GIAYTOTUYTHAN_UpdResponse" message="tns:IMasterService_GIAYTOTUYTHAN_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GIAYTOTUYTHAN_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GIAYTOTUYTHAN_Lst" message="tns:IMasterService_GIAYTOTUYTHAN_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GIAYTOTUYTHAN_LstResponse" message="tns:IMasterService_GIAYTOTUYTHAN_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="E_LOAIDONVI_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/E_LOAIDONVI_Lst" message="tns:IMasterService_E_LOAIDONVI_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/E_LOAIDONVI_LstResponse" message="tns:IMasterService_E_LOAIDONVI_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LINHVUC_DONVI_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/LINHVUC_DONVI_Lst" message="tns:IMasterService_LINHVUC_DONVI_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/LINHVUC_DONVI_LstResponse" message="tns:IMasterService_LINHVUC_DONVI_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LINHVUC_USER_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/LINHVUC_USER_Lst" message="tns:IMasterService_LINHVUC_USER_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/LINHVUC_USER_LstResponse" message="tns:IMasterService_LINHVUC_USER_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_Lst" message="tns:IMasterService_USER_MASTER_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_LstResponse" message="tns:IMasterService_USER_MASTER_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_Lst_isPhongBan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_Lst_isPhongBan" message="tns:IMasterService_USER_MASTER_Lst_isPhongBan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_Lst_isPhongBanResponse" message="tns:IMasterService_USER_MASTER_Lst_isPhongBan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByDonViID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetUserByDonViID" message="tns:IMasterService_GetUserByDonViID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetUserByDonViIDResponse" message="tns:IMasterService_GetUserByDonViID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUserIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetUserByUserIds" message="tns:IMasterService_GetUserByUserIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetUserByUserIdsResponse" message="tns:IMasterService_GetUserByUserIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DUONG_PHUONG_QUAN_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DUONG_PHUONG_QUAN_Lst" message="tns:IMasterService_DUONG_PHUONG_QUAN_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DUONG_PHUONG_QUAN_LstResponse" message="tns:IMasterService_DUONG_PHUONG_QUAN_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_GIAYTOTUYTHAN_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_GIAYTOTUYTHAN_Lst" message="tns:IMasterService_CONNGUOI_GIAYTOTUYTHAN_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CONNGUOI_GIAYTOTUYTHAN_LstResponse" message="tns:IMasterService_CONNGUOI_GIAYTOTUYTHAN_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetUserByCondition" message="tns:IMasterService_GetUserByCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetUserByConditionResponse" message="tns:IMasterService_GetUserByCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByRoleID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetUserByRoleID" message="tns:IMasterService_GetUserByRoleID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetUserByRoleIDResponse" message="tns:IMasterService_GetUserByRoleID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleByCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetRoleByCondition" message="tns:IMasterService_GetRoleByCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetRoleByConditionResponse" message="tns:IMasterService_GetRoleByCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhongBanIDByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetPhongBanIDByUserID" message="tns:IMasterService_GetPhongBanIDByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetPhongBanIDByUserIDResponse" message="tns:IMasterService_GetPhongBanIDByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CANBO_Ins" message="tns:IMasterService_CANBO_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CANBO_InsResponse" message="tns:IMasterService_CANBO_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_DONVI_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CANBO_DONVI_Ins" message="tns:IMasterService_CANBO_DONVI_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CANBO_DONVI_InsResponse" message="tns:IMasterService_CANBO_DONVI_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_Ins" message="tns:IMasterService_DONVI_LDAP_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_InsResponse" message="tns:IMasterService_DONVI_LDAP_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_LstByOU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_LstByOU" message="tns:IMasterService_DONVI_LDAP_LstByOU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_LstByOUResponse" message="tns:IMasterService_DONVI_LDAP_LstByOU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_LstById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_LstById" message="tns:IMasterService_DONVI_LDAP_LstById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_LstByIdResponse" message="tns:IMasterService_DONVI_LDAP_LstById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_Ins" message="tns:IMasterService_USER_MASTER_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_InsResponse" message="tns:IMasterService_USER_MASTER_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRelateMasterDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/InsertRelateMasterDB" message="tns:IMasterService_InsertRelateMasterDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/InsertRelateMasterDBResponse" message="tns:IMasterService_InsertRelateMasterDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_Upd" message="tns:IMasterService_USER_MASTER_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_UpdResponse" message="tns:IMasterService_USER_MASTER_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_UpdCanBo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_UpdCanBo" message="tns:IMasterService_USER_MASTER_UpdCanBo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_UpdCanBoResponse" message="tns:IMasterService_USER_MASTER_UpdCanBo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="E_CAPDONVI_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/E_CAPDONVI_Lst" message="tns:IMasterService_E_CAPDONVI_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/E_CAPDONVI_LstResponse" message="tns:IMasterService_E_CAPDONVI_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_Search" message="tns:IMasterService_DM_DONVI_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_SearchResponse" message="tns:IMasterService_DM_DONVI_Search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_Ins" message="tns:IMasterService_DM_DONVI_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_InsResponse" message="tns:IMasterService_DM_DONVI_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_Upd" message="tns:IMasterService_DM_DONVI_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_UpdResponse" message="tns:IMasterService_DM_DONVI_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_GetByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_GetByID" message="tns:IMasterService_DM_DONVI_GetByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_GetByIDResponse" message="tns:IMasterService_DM_DONVI_GetByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_Lst" message="tns:IMasterService_DONVI_LDAP_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_LstResponse" message="tns:IMasterService_DONVI_LDAP_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_Del" message="tns:IMasterService_DONVI_LDAP_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_DelResponse" message="tns:IMasterService_DONVI_LDAP_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_Upd" message="tns:IMasterService_DONVI_LDAP_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DONVI_LDAP_UpdResponse" message="tns:IMasterService_DONVI_LDAP_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_Del" message="tns:IMasterService_DM_DONVI_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_DelResponse" message="tns:IMasterService_DM_DONVI_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_LstByDonViCapCha">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_LstByDonViCapCha" message="tns:IMasterService_DM_DONVI_LstByDonViCapCha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_LstByDonViCapChaResponse" message="tns:IMasterService_DM_DONVI_LstByDonViCapCha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_Ins" message="tns:IMasterService_HETHONG_ROLEGROUP_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_InsResponse" message="tns:IMasterService_HETHONG_ROLEGROUP_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_Lst" message="tns:IMasterService_HETHONG_ROLEGROUP_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_LstResponse" message="tns:IMasterService_HETHONG_ROLEGROUP_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_Upd" message="tns:IMasterService_HETHONG_ROLEGROUP_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_UpdResponse" message="tns:IMasterService_HETHONG_ROLEGROUP_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_Del" message="tns:IMasterService_HETHONG_ROLEGROUP_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_DelResponse" message="tns:IMasterService_HETHONG_ROLEGROUP_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LINHVUC_DONVI_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/LINHVUC_DONVI_Ins" message="tns:IMasterService_LINHVUC_DONVI_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/LINHVUC_DONVI_InsResponse" message="tns:IMasterService_LINHVUC_DONVI_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LINHVUC_DONVI_Del_ByDonViID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/LINHVUC_DONVI_Del_ByDonViID" message="tns:IMasterService_LINHVUC_DONVI_Del_ByDonViID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/LINHVUC_DONVI_Del_ByDonViIDResponse" message="tns:IMasterService_LINHVUC_DONVI_Del_ByDonViID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_LINHVUC_GetByDonViID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_LINHVUC_GetByDonViID" message="tns:IMasterService_DM_LINHVUC_GetByDonViID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_LINHVUC_GetByDonViIDResponse" message="tns:IMasterService_DM_LINHVUC_GetByDonViID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="THAMSO_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/THAMSO_Upd" message="tns:IMasterService_THAMSO_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/THAMSO_UpdResponse" message="tns:IMasterService_THAMSO_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="THAMSO_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/THAMSO_Lst" message="tns:IMasterService_THAMSO_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/THAMSO_LstResponse" message="tns:IMasterService_THAMSO_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingCauHinhLichCongTac">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetSettingCauHinhLichCongTac" message="tns:IMasterService_GetSettingCauHinhLichCongTac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetSettingCauHinhLichCongTacResponse" message="tns:IMasterService_GetSettingCauHinhLichCongTac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSettingLCT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SaveSettingLCT" message="tns:IMasterService_SaveSettingLCT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SaveSettingLCTResponse" message="tns:IMasterService_SaveSettingLCT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="THAMSO_ByName_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/THAMSO_ByName_Upd" message="tns:IMasterService_THAMSO_ByName_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/THAMSO_ByName_UpdResponse" message="tns:IMasterService_THAMSO_ByName_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRoles_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/UserRoles_Delete" message="tns:IMasterService_UserRoles_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/UserRoles_DeleteResponse" message="tns:IMasterService_UserRoles_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRole_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/UserRole_Ins" message="tns:IMasterService_UserRole_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/UserRole_InsResponse" message="tns:IMasterService_UserRole_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleGroup_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/RoleGroup_Lst" message="tns:IMasterService_RoleGroup_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/RoleGroup_LstResponse" message="tns:IMasterService_RoleGroup_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhongBanByDonViId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetPhongBanByDonViId" message="tns:IMasterService_GetPhongBanByDonViId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetPhongBanByDonViIdResponse" message="tns:IMasterService_GetPhongBanByDonViId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HasAdminRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HasAdminRole" message="tns:IMasterService_HasAdminRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HasAdminRoleResponse" message="tns:IMasterService_HasAdminRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuanLyDonViRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetQuanLyDonViRole" message="tns:IMasterService_GetQuanLyDonViRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetQuanLyDonViRoleResponse" message="tns:IMasterService_GetQuanLyDonViRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDonViByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetDonViByUserId" message="tns:IMasterService_GetDonViByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetDonViByUserIdResponse" message="tns:IMasterService_GetDonViByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuanLyHeThongRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetQuanLyHeThongRole" message="tns:IMasterService_GetQuanLyHeThongRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetQuanLyHeThongRoleResponse" message="tns:IMasterService_GetQuanLyHeThongRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ROLE_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/ROLE_Lst" message="tns:IMasterService_ROLE_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/ROLE_LstResponse" message="tns:IMasterService_ROLE_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRoles_GetRolesByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/UserRoles_GetRolesByUserID" message="tns:IMasterService_UserRoles_GetRolesByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/UserRoles_GetRolesByUserIDResponse" message="tns:IMasterService_UserRoles_GetRolesByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_THONGTINCANBO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/Get_THONGTINCANBO" message="tns:IMasterService_Get_THONGTINCANBO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/Get_THONGTINCANBOResponse" message="tns:IMasterService_Get_THONGTINCANBO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="THONGTINCANBO_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/THONGTINCANBO_Upd" message="tns:IMasterService_THONGTINCANBO_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/THONGTINCANBO_UpdResponse" message="tns:IMasterService_THONGTINCANBO_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_NGUOIDUNG_Update_Image">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_NGUOIDUNG_Update_Image" message="tns:IMasterService_DM_DONVI_NGUOIDUNG_Update_Image_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_NGUOIDUNG_Update_ImageResponse" message="tns:IMasterService_DM_DONVI_NGUOIDUNG_Update_Image_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_NGUOIDUNG_Get_Image">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_NGUOIDUNG_Get_Image" message="tns:IMasterService_DM_DONVI_NGUOIDUNG_Get_Image_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DM_DONVI_NGUOIDUNG_Get_ImageResponse" message="tns:IMasterService_DM_DONVI_NGUOIDUNG_Get_Image_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="E_LOAICANHAN_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/E_LOAICANHAN_Lst" message="tns:IMasterService_E_LOAICANHAN_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/E_LOAICANHAN_LstResponse" message="tns:IMasterService_E_LOAICANHAN_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LINHVUC__SelectByHeThongID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LINHVUC__SelectByHeThongID" message="tns:IMasterService_HETHONG_LINHVUC__SelectByHeThongID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LINHVUC__SelectByHeThongIDResponse" message="tns:IMasterService_HETHONG_LINHVUC__SelectByHeThongID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LINHVUC_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LINHVUC_Insert" message="tns:IMasterService_HETHONG_LINHVUC_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LINHVUC_InsertResponse" message="tns:IMasterService_HETHONG_LINHVUC_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LINHVUC_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LINHVUC_Update" message="tns:IMasterService_HETHONG_LINHVUC_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_LINHVUC_UpdateResponse" message="tns:IMasterService_HETHONG_LINHVUC_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_SelectByHeThongID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_SelectByHeThongID" message="tns:IMasterService_HETHONG_ROLEGROUP_SelectByHeThongID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_SelectByHeThongIDResponse" message="tns:IMasterService_HETHONG_ROLEGROUP_SelectByHeThongID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="E_LOAIHETHONG_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/E_LOAIHETHONG_Lst" message="tns:IMasterService_E_LOAIHETHONG_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/E_LOAIHETHONG_LstResponse" message="tns:IMasterService_E_LOAIHETHONG_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListThuTucHanhChinhDonVi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/ListThuTucHanhChinhDonVi" message="tns:IMasterService_ListThuTucHanhChinhDonVi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/ListThuTucHanhChinhDonViResponse" message="tns:IMasterService_ListThuTucHanhChinhDonVi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GethuTucHanhChinhDonViById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GethuTucHanhChinhDonViById" message="tns:IMasterService_GethuTucHanhChinhDonViById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GethuTucHanhChinhDonViByIdResponse" message="tns:IMasterService_GethuTucHanhChinhDonViById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_LstThayDoi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_LstThayDoi" message="tns:IMasterService_USER_MASTER_LstThayDoi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_LstThayDoiResponse" message="tns:IMasterService_USER_MASTER_LstThayDoi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_LstCanBo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_LstCanBo" message="tns:IMasterService_USER_MASTER_LstCanBo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/USER_MASTER_LstCanBoResponse" message="tns:IMasterService_USER_MASTER_LstCanBo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDonViInQLVB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/CheckDonViInQLVB" message="tns:IMasterService_CheckDonViInQLVB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/CheckDonViInQLVBResponse" message="tns:IMasterService_CheckDonViInQLVB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchConNguoi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SearchConNguoi" message="tns:IMasterService_SearchConNguoi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SearchConNguoiResponse" message="tns:IMasterService_SearchConNguoi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPhatHanh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SearchPhatHanh" message="tns:IMasterService_SearchPhatHanh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SearchPhatHanhResponse" message="tns:IMasterService_SearchPhatHanh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhatHanh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/UpdatePhatHanh" message="tns:IMasterService_UpdatePhatHanh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/UpdatePhatHanhResponse" message="tns:IMasterService_UpdatePhatHanh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonViByCap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DonViByCap" message="tns:IMasterService_DonViByCap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DonViByCapResponse" message="tns:IMasterService_DonViByCap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonViByDonViCapCha">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DonViByDonViCapCha" message="tns:IMasterService_DonViByDonViCapCha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DonViByDonViCapChaResponse" message="tns:IMasterService_DonViByDonViCapCha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonViInUserMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/DonViInUserMaster" message="tns:IMasterService_DonViInUserMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/DonViInUserMasterResponse" message="tns:IMasterService_DonViInUserMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDonViById_Lst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetDonViById_Lst" message="tns:IMasterService_GetDonViById_Lst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetDonViById_LstResponse" message="tns:IMasterService_GetDonViById_Lst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZimbraSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetZimbraSetting" message="tns:IMasterService_GetZimbraSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetZimbraSettingResponse" message="tns:IMasterService_GetZimbraSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetZimbraSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SetZimbraSetting" message="tns:IMasterService_SetZimbraSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SetZimbraSettingResponse" message="tns:IMasterService_SetZimbraSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlfrescoSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetAlfrescoSetting" message="tns:IMasterService_GetAlfrescoSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetAlfrescoSettingResponse" message="tns:IMasterService_GetAlfrescoSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAlfrescoSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/SetAlfrescoSetting" message="tns:IMasterService_SetAlfrescoSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/SetAlfrescoSettingResponse" message="tns:IMasterService_SetAlfrescoSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMasterService/GetEmailSetting" message="tns:IMasterService_GetEmailSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMasterService/GetEmailSettingResponse" message="tns:IMasterService_GetEmailSetting_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicHttpService" type="tns:IMasterService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetEmailSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SetEmailSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKioskSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetKioskSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetKioskSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SetKioskSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLdapSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetLdapSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLdapSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SetLdapSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommonSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetCommonSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCommonSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SetCommonSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWgGopYSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetWgGopYSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWgGopYSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SetWgGopYSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSlideLichCongTacSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetSlideLichCongTacSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSlideLichCongTacSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SetSlideLichCongTacSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDsDonViNganh">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetDsDonViNganh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDsDonViNganhModel">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetDsDonViNganhModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDonViNganh">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SaveDonViNganh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateThuTucHanhChinhDonVi">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/UpdateThuTucHanhChinhDonVi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsThuTucHanhChinhDonVi">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/InsThuTucHanhChinhDonVi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckExistThuTucHanhChinhDonVi">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CheckExistThuTucHanhChinhDonVi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GethuTucHanhChinhDonViByConditions">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GethuTucHanhChinhDonViByConditions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDataVaiTroChucVu">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/LoadDataVaiTroChucVu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="E_VAITROINANHETHONG_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/E_VAITROINANHETHONG_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckExists_E_VAITROINANHETHONG">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CheckExists_E_VAITROINANHETHONG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDanhMucInAnTheoPhanQuyen">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/LayDanhMucInAnTheoPhanQuyen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_PHANQUYEN_BAOCAO">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_HETHONG_PHANQUYEN_BAOCAO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDanhMucInAn">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetAllDanhMucInAn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListTheoTenVietTat">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetListTheoTenVietTat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThongBaoBaoTriGet">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/ThongBaoBaoTriGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DanhSachPhimTatDaDinhNghia">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DanhSachPhimTatDaDinhNghia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LIENKETNGOAI_ListByUserID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_LIENKETNGOAI_ListByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LIENKETNGOAI_GetbyChucNang">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_LIENKETNGOAI_GetbyChucNang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LIENKETNGOAI_ListChucNang">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_LIENKETNGOAI_ListChucNang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_DONVI_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CANBO_DONVI_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CANBO_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CONNGUOI_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CONNGUOI_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CONNGUOI_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_Del">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CONNGUOI_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_CHUCDANH_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_CHUCDANH_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_CHUCVU_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_CHUCVU_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DANTOC_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DANTOC_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_LstDropTreeView">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_LstDropTreeView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectListDonVi">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SelectListDonVi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_ByCAP01">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_ByCAP01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DUONG_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DUONG_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_HETHONG_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThongTinHeThongById">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetThongTinHeThongById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_Insert">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_HETHONG_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_Update">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_HETHONG_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_HETHONG_DeleteByHeThongID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_HETHONG_DeleteByHeThongID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_LINHVUC_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_LINHVUC_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_LOAIGIAYTO_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_LOAIGIAYTO_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_NHOMDANTOC_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_NHOMDANTOC_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_NHOMTHUTUC_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_NHOMTHUTUC_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_PHUONGXA_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_PHUONGXA_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_QUANHUYEN_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_QUANHUYEN_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_QUOCGIA_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_QUOCGIA_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_THUTUCHANHCHINH_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_THUTUCHANHCHINH_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_TINHTHANH_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_TINHTHANH_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_TONGIAO_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_TONGIAO_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_TRINHDO_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_TRINHDO_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOANHNGHIEP_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DOANHNGHIEP_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOANHNGHIEP_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DOANHNGHIEP_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOANHNGHIEP_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DOANHNGHIEP_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOANHNGHIEP_Del">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DOANHNGHIEP_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_HETHONG_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_HETHONG_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_DONVI_DeleteByDonViID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_DONVI_DeleteByDonViID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_HETHONG_Update">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_HETHONG_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_HETHONG_Insert">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_HETHONG_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_HETHONG_UpdateByDonViID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_HETHONG_UpdateByDonViID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="E_CAPHANHCHINH_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/E_CAPHANHCHINH_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GIAYTOTUYTHAN_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GIAYTOTUYTHAN_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GIAYTOTUYTHAN_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GIAYTOTUYTHAN_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GIAYTOTUYTHAN_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GIAYTOTUYTHAN_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="E_LOAIDONVI_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/E_LOAIDONVI_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LINHVUC_DONVI_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/LINHVUC_DONVI_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LINHVUC_USER_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/LINHVUC_USER_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/USER_MASTER_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_Lst_isPhongBan">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/USER_MASTER_Lst_isPhongBan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByDonViID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetUserByDonViID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUserIds">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetUserByUserIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DUONG_PHUONG_QUAN_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DUONG_PHUONG_QUAN_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CONNGUOI_GIAYTOTUYTHAN_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CONNGUOI_GIAYTOTUYTHAN_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByCondition">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetUserByCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByRoleID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetUserByRoleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleByCondition">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetRoleByCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhongBanIDByUserID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetPhongBanIDByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CANBO_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CANBO_DONVI_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CANBO_DONVI_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_LDAP_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_LstByOU">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_LDAP_LstByOU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_LstById">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_LDAP_LstById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/USER_MASTER_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRelateMasterDB">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/InsertRelateMasterDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/USER_MASTER_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_UpdCanBo">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/USER_MASTER_UpdCanBo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="E_CAPDONVI_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/E_CAPDONVI_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Search">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_GetByID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_GetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_LDAP_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_Del">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_LDAP_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DONVI_LDAP_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DONVI_LDAP_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_Del">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_LstByDonViCapCha">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_LstByDonViCapCha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_Del">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LINHVUC_DONVI_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/LINHVUC_DONVI_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LINHVUC_DONVI_Del_ByDonViID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/LINHVUC_DONVI_Del_ByDonViID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_LINHVUC_GetByDonViID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_LINHVUC_GetByDonViID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="THAMSO_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/THAMSO_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="THAMSO_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/THAMSO_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingCauHinhLichCongTac">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetSettingCauHinhLichCongTac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSettingLCT">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SaveSettingLCT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="THAMSO_ByName_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/THAMSO_ByName_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRoles_Delete">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/UserRoles_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRole_Ins">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/UserRole_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleGroup_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/RoleGroup_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhongBanByDonViId">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetPhongBanByDonViId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasAdminRole">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HasAdminRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuanLyDonViRole">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetQuanLyDonViRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDonViByUserId">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetDonViByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuanLyHeThongRole">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetQuanLyHeThongRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ROLE_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/ROLE_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRoles_GetRolesByUserID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/UserRoles_GetRolesByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_THONGTINCANBO">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/Get_THONGTINCANBO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="THONGTINCANBO_Upd">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/THONGTINCANBO_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_NGUOIDUNG_Update_Image">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_NGUOIDUNG_Update_Image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DONVI_NGUOIDUNG_Get_Image">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DM_DONVI_NGUOIDUNG_Get_Image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="E_LOAICANHAN_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/E_LOAICANHAN_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LINHVUC__SelectByHeThongID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_LINHVUC__SelectByHeThongID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LINHVUC_Insert">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_LINHVUC_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_LINHVUC_Update">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_LINHVUC_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HETHONG_ROLEGROUP_SelectByHeThongID">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/HETHONG_ROLEGROUP_SelectByHeThongID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="E_LOAIHETHONG_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/E_LOAIHETHONG_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListThuTucHanhChinhDonVi">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/ListThuTucHanhChinhDonVi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GethuTucHanhChinhDonViById">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GethuTucHanhChinhDonViById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_LstThayDoi">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/USER_MASTER_LstThayDoi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USER_MASTER_LstCanBo">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/USER_MASTER_LstCanBo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDonViInQLVB">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/CheckDonViInQLVB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchConNguoi">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SearchConNguoi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPhatHanh">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SearchPhatHanh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhatHanh">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/UpdatePhatHanh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonViByCap">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DonViByCap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonViByDonViCapCha">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DonViByDonViCapCha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DonViInUserMaster">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/DonViInUserMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDonViById_Lst">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetDonViById_Lst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZimbraSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetZimbraSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetZimbraSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SetZimbraSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlfrescoSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetAlfrescoSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAlfrescoSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/SetAlfrescoSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailSetting">
+      <soap:operation soapAction="http://tempuri.org/IMasterService/GetEmailSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MasterService">
+    <wsdl:port name="basicHttpService" binding="tns:basicHttpService">
+      <soap:address location="http://localhost:9092/DungChung/MasterService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

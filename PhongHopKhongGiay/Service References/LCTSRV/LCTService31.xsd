@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" />
+  <xs:import schemaLocation="http://localhost:8091/HanhChinh/LCTService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities.LichHen" />
+  <xs:element name="lstChucVu">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstChucVuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="lstChucVuResult" nillable="true" type="q1:ArrayOfDM_CHUCVU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DMCHUCVU_LstByChucVuID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChucVuID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DonViID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="donViNgoai" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DMCHUCVU_LstByChucVuIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="DMCHUCVU_LstByChucVuIDResult" nillable="true" type="q2:ArrayOfCANBO_Lst_VaiTro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstDonVi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstDonViResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="lstDonViResult" nillable="true" type="q3:ArrayOfDM_DONVILIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstDMVaiTroThamDu">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstDMVaiTroThamDuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="lstDMVaiTroThamDuResult" nillable="true" type="q4:ArrayOfDMVAITROTHAMDU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstDMThanhPhanThamDu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstDMThanhPhanThamDuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="lstDMThanhPhanThamDuResult" nillable="true" type="q5:ArrayOfDMTHANHPHANTHAMDU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DanhMucThanhPhanThamDu_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="lstDMTHANHPHANTHAMDU" nillable="true" type="q6:ArrayOfDMTHANHPHANTHAMDU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DanhMucThanhPhanThamDu_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DanhMucThanhPhanThamDu_InsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DanhMucThanhPhanThamDu_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="dMTHANHPHANTHAMDU" nillable="true" type="q7:DMTHANHPHANTHAMDU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DanhMucThanhPhanThamDu_UpdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DanhMucThanhPhanThamDu_UpdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstDMNhomLichCongTac">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstDMNhomLichCongTacResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="lstDMNhomLichCongTacResult" nillable="true" type="q8:ArrayOfDMNHOMLICHCONGTAC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VaiTroThamDu_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="m_VAITROTHAMDU" nillable="true" type="q9:VAITROTHAMDU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VaiTroThamDu_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VaiTroThamDu_InsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VaiTroThamDu_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VaiTroThamDu_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="VaiTroThamDu_LstResult" nillable="true" type="q10:ArrayOfVAITROTHAMDULIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VaiTroThamDu_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_VaiTroThamDuID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VaiTroThamDu_DelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThanhPhanThamDu_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="m_THANHPHANTHAMDU" nillable="true" type="q11:THANHPHANTHAMDU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThanhPhanThamDu_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThanhPhanThamDu_InsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThanhPhanThamDu_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThanhPhanThamDu_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="ThanhPhanThamDu_LstResult" nillable="true" type="q12:ArrayOfTHANHPHANTHAMDULIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThanhPhanThamDu_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_ThanhPhanThamDuID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThanhPhanThamDu_DelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NhomLichCongTac_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="m_NHOMLICHCONGTAC" nillable="true" type="q13:NHOMLICHCONGTAC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NhomLichCongTac_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NhomLichCongTac_InsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NhomLichCongTac_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NhomLichCongTac_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="NhomLichCongTac_LstResult" nillable="true" type="q14:ArrayOfNHOMLICHCONGTACLIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NhomLichCongTac_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="m_NhomLichCongTacID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NhomLichCongTac_DelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_Lst_VaiTro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+        <xs:element minOccurs="0" name="DMVaiTroThamDuID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_Lst_VaiTroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="CANBO_Lst_VaiTroResult" nillable="true" type="q15:ArrayOfCANBO_Lst_VaiTro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_LstAllVaiTro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_LstAllVaiTroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="CANBO_LstAllVaiTroResult" nillable="true" type="q16:ArrayOfCANBO_Lst_VaiTro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DMPhongHop_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DMPhongHop_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="DMPhongHop_LstResult" nillable="true" type="q17:ArrayOfDMPHONGHOP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="m_LICHCONGTAC" nillable="true" type="q18:LICHCONGTAC" />
+        <xs:element minOccurs="0" name="checkTrung" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LICHCONGTAC_InsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="m_LICHCONGTAC" nillable="true" type="q19:LICHCONGTAC" />
+        <xs:element minOccurs="0" name="checkTrung" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_UpdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LICHCONGTAC_UpdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANHDAOTHAMGIA_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="m_LANHDAOTHAMGIA" nillable="true" type="q20:LANHDAOTHAMGIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANHDAOTHAMGIA_InsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NgayBatDau" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NgayKetThuc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+        <xs:element minOccurs="0" name="loaiLichID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_LstResult" nillable="true" type="q21:ArrayOfLICHCONGTACLIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_LstUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NgayBatDau" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NgayKetThuc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+        <xs:element minOccurs="0" name="loaiLichID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_LstUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_LstUpdateResult" nillable="true" type="q22:ArrayOfLICHCONGTACLIST_UPD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_LstDuyet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NgayBatDau" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NgayKetThuc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+        <xs:element minOccurs="0" name="loaiLichID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_LstDuyetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_LstDuyetResult" nillable="true" type="q23:ArrayOfLICHCONGTACLIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_LstPhatHanh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NgayBatDau" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NgayKetThuc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+        <xs:element minOccurs="0" name="loaiLichID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_LstPhatHanhResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_LstPhatHanhResult" nillable="true" type="q24:ArrayOfLICHCONGTACLIST_PH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSearch" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="thang" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_SearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_SearchResult" nillable="true" type="q25:ArrayOfLICHCONGTACSEARCH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetByLichCongTacID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LichCongTacID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetByLichCongTacIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_GetByLichCongTacIDResult" nillable="true" type="q26:ArrayOfLICHCONGTACLIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANHDAOTHAMGIA_GetByLichCongTacID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LichCongTacID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LanhDaoVanPhong" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANHDAOTHAMGIA_GetByLichCongTacIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LANHDAOTHAMGIA_GetByLichCongTacIDResult" nillable="true" type="q27:ArrayOfCANBO_Lst_VaiTro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_DelByLichCongTacID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LichCongTacID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_DelByLichCongTacIDResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANHDAOTHAMGIA_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LichCongTacID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANHDAOTHAMGIA_DelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FILEDINHKEM_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FilePath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LichCongTacID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FILEDINHKEM_InsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FILEDINHKEM_Get">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LichCongTacID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FILEDINHKEM_GetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="FILEDINHKEM_GetResult" nillable="true" type="q28:ArrayOfFILEDINHKEM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FILEDINHKEM_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileDinhKemID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FILEDINHKEM_DelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANHDAOTHAMGIA_GetThanhPhanThamDu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LichCongTacID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MaLoai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LANHDAOTHAMGIA_GetThanhPhanThamDuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LANHDAOTHAMGIA_GetThanhPhanThamDuResult" nillable="true" type="q29:ArrayOfCANBO_Lst_VaiTro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THANHPHANTHAMDU_LstByDonViID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THANHPHANTHAMDU_LstByDonViIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="THANHPHANTHAMDU_LstByDonViIDResult" nillable="true" type="q30:ArrayOfTHANHPHANTHAMDULIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_NhomLanhDao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDay" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDay" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CanBoID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MaLoai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+        <xs:element minOccurs="0" name="loaiLichID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_NhomLanhDaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="Get_NhomLanhDaoResult" nillable="true" type="q31:ArrayOfLICHCONGTACLIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NHOMLICHCONGTAC_LstByDonViID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NHOMLICHCONGTAC_LstByDonViIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="NHOMLICHCONGTAC_LstByDonViIDResult" nillable="true" type="q32:ArrayOfDMNHOMLICHCONGTAC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_TV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+        <xs:element minOccurs="0" name="LoaiLichID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_TVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_TVResult" nillable="true" type="q33:ArrayOfLICHCONGTAC_TV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_SnapShort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_SnapShortResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_SnapShortResult" nillable="true" type="q34:ArrayOfLICHCONGTAC_TV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THANHPHANTHAMDU_LstVaiTro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THANHPHANTHAMDU_LstVaiTroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="THANHPHANTHAMDU_LstVaiTroResult" nillable="true" type="q35:ArrayOfTHANHPHANTHAMDUVAITRO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_SnapShort_CaNhan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_SnapShort_CaNhanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_SnapShort_CaNhanResult" nillable="true" type="q36:ArrayOfLICHCONGTAC_TV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_lstCanBoThamGia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lichCongTacID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_lstCanBoThamGiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_lstCanBoThamGiaResult" nillable="true" type="q37:ArrayOfLICHCANBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetWeekDuyetLich">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetWeekDuyetLichResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_GetWeekDuyetLichResult" nillable="true" type="q38:ArrayOfLISTDUYETLICH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetMonthDuyetLich">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetMonthDuyetLichResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_GetMonthDuyetLichResult" nillable="true" type="q39:ArrayOfLISTDUYETLICH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetWeekPhatHanhLich">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetWeekPhatHanhLichResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_GetWeekPhatHanhLichResult" nillable="true" type="q40:ArrayOfLISTDUYETLICH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetMonthPhatHanhLich">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GetMonthPhatHanhLichResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LICHCONGTAC_GetMonthPhatHanhLichResult" nillable="true" type="q41:ArrayOfLISTDUYETLICH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_UpdDuyet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lichCongTacID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="daDuyet" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_UpdDuyetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_UpdPhatHanh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lichCongTacID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="daPhatHanh" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_UpdPhatHanhResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_LOAILICH_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_LOAILICH_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="E_LOAILICH_LstResult" nillable="true" type="q42:ArrayOfE_LOAILICH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_LICHCANHAN_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="ojb" nillable="true" type="q43:HC_LICHCANHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_LICHCANHAN_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HC_LICHCANHAN_InsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_LICHCANHAN_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="ojb" nillable="true" type="q44:HC_LICHCANHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_LICHCANHAN_UpdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HC_LICHCANHAN_UpdResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_LICHCANHAN_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="ojb" nillable="true" type="q45:HC_LICHCANHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_LICHCANHAN_DelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HC_LICHCANHAN_DelResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_LICHCANHAN_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="ojb" nillable="true" type="q46:HC_LICHCANHAN_SET" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_LICHCANHAN_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="HC_LICHCANHAN_LstResult" nillable="true" type="q47:ArrayOfHC_LICHCANHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_DMLOAILICHCANHAN_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HC_DMLOAILICHCANHAN_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="HC_DMLOAILICHCANHAN_LstResult" nillable="true" type="q48:ArrayOfHC_DMLOAILICHCANHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_UpdShowTV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lichCongTacID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isShowTV" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_UpdShowTVResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GETTENDONVI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LICHCONGTAC_GETTENDONVIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LICHCONGTAC_GETTENDONVIResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHop_TimKiemVanBan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:int" />
+        <xs:element minOccurs="0" name="soVanBan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="trichYeu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ngayVanBanFrom" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ngayVanBanTo" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="coQuanBanHanh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNum" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="orderBy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHop_TimKiemVanBanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LichHop_TimKiemVanBanResult" nillable="true" type="q49:ArrayOfQLVB_VanBan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities.LichHen" minOccurs="0" name="objLichHen" nillable="true" type="q50:LICHHEN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LichHen_InsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tuNgay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="denNgay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="isDoanhNghiep" type="xs:boolean" />
+        <xs:element minOccurs="0" name="isHuy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageNum" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities.LichHen" minOccurs="0" name="LichHen_ListResult" nillable="true" type="q51:ArrayOfLICHHENVIEW" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_GetByLichHenID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lichHenID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_GetByLichHenIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities.LichHen" minOccurs="0" name="LichHen_GetByLichHenIDResult" nillable="true" type="q52:LICHHEN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_ListLanhDao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_ListLanhDaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LichHen_ListLanhDaoResult" nillable="true" type="q53:ArrayOfCANBO_Lst_VaiTro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_UpdateHoanTat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lichHenID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_UpdateHoanTatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LichHen_UpdateHoanTatResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_UpdateHuy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lichHenID" type="xs:long" />
+        <xs:element minOccurs="0" name="xoa" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_UpdateHuyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LichHen_UpdateHuyResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_ThongKe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities.LichHen" minOccurs="0" name="objTimKiem" nillable="true" type="q54:ThongTinTimKiem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LichHen_ThongKeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities.LichHen" minOccurs="0" name="LichHen_ThongKeResult" nillable="true" type="q55:ArrayOfLichHenThongKe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadDanhSachGioLamViec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:int" />
+        <xs:element minOccurs="0" name="used" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadDanhSachGioLamViecResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities" minOccurs="0" name="LoadDanhSachGioLamViecResult" nillable="true" type="q56:ArrayOfPH_DMGioLamViec" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

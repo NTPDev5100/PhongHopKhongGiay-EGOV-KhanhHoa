@@ -1,0 +1,980 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E22640D-E263-4E8E-9DAB-B1A020F0CADE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhongHopKhongGiay</RootNamespace>
+    <AssemblyName>PhongHopKhongGiay</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afresco.Lib.Uti, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\Afresco.Lib.Uti.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Cells, Version=8.1.1.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Cells.Fakes, Version=8.1.1.0, Culture=neutral, PublicKeyToken=0ae41878053f6703, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Aspose.Cells.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Email, Version=4.6.0.0, Culture=neutral, PublicKeyToken=ad504e9f0d34714a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Aspose.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Pdf, Version=6.8.0.0, Culture=neutral, PublicKeyToken=47b2d0fcacdd3eb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Aspose.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Word, Version=3.4.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Aspose.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=14.5.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke, Version=7.3.2.109, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PhongHopKhongGiay.SRV\Hosts\PhongHopKhongGiay.SRV.Hosts.Web\bin\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PhongHopKhongGiay.SRV\Hosts\PhongHopKhongGiay.SRV.Hosts.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PhongHopKhongGiay.SRV\Hosts\PhongHopKhongGiay.SRV.Hosts.Web\bin\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PhongHopKhongGiay.SRV\Hosts\PhongHopKhongGiay.SRV.Hosts.Web\bin\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PhongHopKhongGiay.SRV\Hosts\PhongHopKhongGiay.SRV.Hosts.Web\bin\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PhongHopKhongGiay.SRV\Hosts\PhongHopKhongGiay.SRV.Hosts.Web\bin\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=7.11.0.41046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.46, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=5.11.0.2046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI, Version=2013.2.717.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaoCao\ThongKeCuocHop.ascx" />
+    <Content Include="BieuQuyetTuDo\BieuQuyetTudo.ascx" />
+    <Content Include="Libary\AlertNotify\alertify.js" />
+    <Content Include="Libary\AlertNotify\alertify.min.js" />
+    <Content Include="Libary\AlertNotify\css\alertify.css" />
+    <Content Include="Libary\AlertNotify\css\alertify.min.css" />
+    <Content Include="Libary\AlertNotify\css\alertify.rtl.css" />
+    <Content Include="Libary\AlertNotify\css\alertify.rtl.min.css" />
+    <Content Include="Libary\AlertNotify\css\themes\bootstrap.css" />
+    <Content Include="Libary\AlertNotify\css\themes\bootstrap.min.css" />
+    <Content Include="Libary\AlertNotify\css\themes\bootstrap.rtl.css" />
+    <Content Include="Libary\AlertNotify\css\themes\bootstrap.rtl.min.css" />
+    <Content Include="Libary\AlertNotify\css\themes\default.css" />
+    <Content Include="Libary\AlertNotify\css\themes\default.min.css" />
+    <Content Include="Libary\AlertNotify\css\themes\default.rtl.css" />
+    <Content Include="Libary\AlertNotify\css\themes\default.rtl.min.css" />
+    <Content Include="Libary\AlertNotify\css\themes\semantic.css" />
+    <Content Include="Libary\AlertNotify\css\themes\semantic.min.css" />
+    <Content Include="Libary\AlertNotify\css\themes\semantic.rtl.css" />
+    <Content Include="Libary\AlertNotify\css\themes\semantic.rtl.min.css" />
+    <Content Include="Libary\BoostrapTable\tableExport.min.js" />
+    <Content Include="Libary\BoostrapTable\bootstrap-table-export.min.js" />
+    <Content Include="Libary\BoostrapTable\bootstrap-table-reorder-rows.css" />
+    <Content Include="Libary\BoostrapTable\bootstrap-table-reorder-rows.js" />
+    <Content Include="Libary\BoostrapTable\bootstrap-table.min.css" />
+    <Content Include="Libary\BoostrapTable\bootstrap-table.min.js" />
+    <Content Include="Libary\BoostrapTable\bootstrap.min.css" />
+    <Content Include="Libary\BoostrapTable\bootstrap.min.js" />
+    <Content Include="Libary\BoostrapTable\jquery.tablednd.js" />
+    <Content Include="Libary\BoostrapTable\jquerysctipttop.css" />
+    <Content Include="Libary\BoostrapTable\materialdesignicons.min.css" />
+    <Content Include="Libary\Drop-Down-Combo-Tree\comboTreePlugin.js" />
+    <Content Include="Libary\Drop-Down-Combo-Tree\Sample.html" />
+    <Content Include="Libary\Drop-Down-Combo-Tree\style.css" />
+    <Content Include="Libary\font\Font-awesome.min.css" />
+    <Content Include="Libary\javascript-ej1-demos\content\bootstrap-notify.css" />
+    <Content Include="Libary\javascript-ej1-demos\content\bootstrap.min.css" />
+    <Content Include="Libary\javascript-ej1-demos\content\ejthemes\common-images\ejicons.svg" />
+    <Content Include="Libary\javascript-ej1-demos\content\default-responsive.css" />
+    <Content Include="Libary\javascript-ej1-demos\content\default.css" />
+    <Content Include="Libary\javascript-ej1-demos\content\ejthemes\default-theme\ej.theme.min.css" />
+    <Content Include="Libary\javascript-ej1-demos\content\ejthemes\default-theme\ej.web.all.min.css" />
+    <Content Include="Libary\javascript-ej1-demos\content\ejthemes\ej.widgets.core.min.css" />
+    <Content Include="Libary\javascript-ej1-demos\content\ejthemes\responsive-css\ej.responsive.css" />
+    <Content Include="Libary\javascript-ej1-demos\scripts\ej.culture.vi-VN.min.js" />
+    <Content Include="Libary\javascript-ej1-demos\scripts\ej.web.all.min.js" />
+    <Content Include="Libary\javascript-ej1-demos\scripts\jquery-3.4.1.min.js" />
+    <Content Include="Libary\javascript-ej1-demos\scripts\jsrender.min.js" />
+    <Content Include="Libary\javascript-ej1-demos\scripts\properties.js" />
+    <Content Include="Libary\marquee\jquery.marquee.js" />
+    <Content Include="Libary\Notify\notification.js" />
+    <Content Include="Libary\Notify\notify.js" />
+    <Content Include="Libary\Notify\notify.min.js" />
+    <Content Include="Libary\Notify\pnotify.custom.min.css" />
+    <Content Include="Libary\Notify\pnotify.custom.min.js" />
+    <Content Include="Libary\Popper\bootstrap.min.js" />
+    <Content Include="Libary\Popper\jquery-3.2.1.slim.min.js" />
+    <Content Include="Libary\Popper\popper.min.js" />
+    <Content Include="Libary\SignalR\jquery.signalR-2.2.1.js" />
+    <Content Include="Libary\SignalR\jquery.signalR-2.2.1.min.js" />
+    <Content Include="Libary\Sumernote\Print.js" />
+    <Content Include="Libary\Sumernote\summernote.min.css" />
+    <Content Include="Libary\Sumernote\summernote.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libary\Tab\bootstrap.min.css" />
+    <Content Include="Libary\Tab\bootstrap.min.js" />
+    <Content Include="Libary\Tab\jquery.min.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\dist\bootstrap-tagsinput-angular.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\dist\bootstrap-tagsinput-angular.min.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\dist\bootstrap-tagsinput.css" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\dist\bootstrap-tagsinput.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\dist\bootstrap-tagsinput.min.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\examples\assets\app.css" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\examples\assets\app.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\examples\assets\app_bs2.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\examples\assets\app_bs3.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\examples\bootstrap-2.3.2.html" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\examples\index.html" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\Gruntfile.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\karma.conf.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\src\bootstrap-tagsinput-angular.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\src\bootstrap-tagsinput.css" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\src\bootstrap-tagsinput.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\test\bootstrap-tagsinput-angular.tests.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\test\bootstrap-tagsinput\events.tests.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\test\bootstrap-tagsinput\input_with_object_items.tests.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\test\bootstrap-tagsinput\input_with_string_items.tests.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\test\bootstrap-tagsinput\reproduced_bugs.tests.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\test\bootstrap-tagsinput\select_with_object_items.tests.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\test\bootstrap-tagsinput\select_with_string_items.tests.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\test\helpers.js" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\test\index.html" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-datepicker.min.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-select.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap.css" />
+    <Content Include="Scripts\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Scripts\bootstrap\css\select2-bootstrap.css" />
+    <Content Include="Scripts\bootstrap\css\select2-bootstrap.min.css" />
+    <Content Include="Scripts\bootstrap\js\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap-notify.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap-notify.min.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap-select.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.js" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap\js\html5shiv.min.js" />
+    <Content Include="Scripts\bootstrap\js\PNotify.js" />
+    <Content Include="Scripts\bootstrap\js\PNotify.min.js" />
+    <Content Include="Scripts\bootstrap\js\respond.min.js" />
+    <Content Include="Scripts\controllers\quanLyController.js" />
+    <Content Include="Scripts\controllers\quanLyTaiLieuKhacV2.js" />
+    <Content Include="Scripts\GoogleMeet\googleMeetController.js" />
+    <Content Include="Scripts\plugins\mustache.min.js" />
+    <Content Include="Schedule\Image\TV\icon_lich01.png" />
+    <Content Include="Schedule\Image\TV\LichTV_01_1.jpg" />
+    <Content Include="Schedule\LichTV_9.aspx" />
+    <Content Include="Schedule\LichTV.ascx" />
+    <Content Include="Schedule\DownloadFileUrl.aspx" />
+    <Content Include="Schedule\DownloadFile.aspx" />
+    <Content Include="Schedule\FileUploadHandler.ashx" />
+    <Content Include="Libary\Drop-Down-Combo-Tree\LICENSE" />
+    <Content Include="Libary\Drop-Down-Combo-Tree\README.md" />
+    <Content Include="Schedule\ChuToa.ascx" />
+    <Content Include="Schedule\PheDuyet.ascx" />
+    <Content Include="Schedule\PageThanhPhanThamDu.ascx" />
+    <Content Include="Schedule\ChuyenTrang.ascx" />
+    <Content Include="Schedule\DanhMuc.ascx" />
+    <Content Include="Schedule\PhatHanh.ascx" />
+    <Content Include="Schedule\TaoLich.ascx" />
+    <Content Include="Schedule\Template\Html.html" />
+    <Content Include="Schedule\ChuanBi.ascx" />
+    <Content Include="Schedule\ThuKy.ascx" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\.gitignore" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\.travis.yml" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\bootstrap-tagsinput.jquery.json" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\bower.json" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\dist\bootstrap-tagsinput-angular.min.js.map" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\dist\bootstrap-tagsinput.less" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\dist\bootstrap-tagsinput.min.js.map" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\dist\bootstrap-tagsinput.zip" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\examples\assets\cities.json" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\examples\assets\citynames.json" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\LICENSE" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\package.json" />
+    <Content Include="Libary\Tags-Input\bootstrap-tagsinput-latest\README.md" />
+    <Content Include="Libary\javascript-ej1-demos\content\ejthemes\common-images\ejicons.eot" />
+    <Content Include="Libary\javascript-ej1-demos\content\ejthemes\common-images\ejicons.ttf" />
+    <Content Include="Libary\javascript-ej1-demos\content\ejthemes\common-images\ejicons.woff" />
+    <None Include="packages.config" />
+    <Content Include="Schedule\Template\LichTuan.doc" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Scripts\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap\webfonts\fa-regular-400.woff2" />
+    <Content Include="Scripts\bootstrap\webfonts\fa-solid-900.woff2" />
+    <None Include="Service References\LCTSRV\LCTService1.disco" />
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.CANBO_Lst_VaiTro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.DMNHOMLICHCONGTAC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.DMPHONGHOP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.DMTHANHPHANTHAMDU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.DMVAITROTHAMDU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.DM_CHUCVU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.DM_DONVILIST.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.E_LOAILICH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.FILEDINHKEM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.HC_DMLOAILICHCANHAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.HC_LICHCANHAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LICHCANBO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LICHCONGTACLIST.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LICHCONGTACLIST_PH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LICHCONGTACLIST_UPD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LICHCONGTACSEARCH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LICHCONGTAC_TV.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LISTDUYETLICH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.NHOMLICHCONGTACLIST.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.QLVB_VanBan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.THANHPHANTHAMDULIST.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.THANHPHANTHAMDUVAITRO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.VAITROTHAMDULIST.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\LCTSRV\LCTService1.wsdl" />
+    <None Include="Service References\LCTSRV\LCTService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LCTSRV\LCTService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LCTSRV\LCTService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LCTSRV\LCTService33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LICHHEN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LichHenThongKe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.LICHHENVIEW.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LCTSRV\PhongHopKhongGiay.LCTSRV.PH_DMGioLamViec.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\MasterService\MasterService.disco" />
+    <None Include="Service References\MasterService\configuration91.svcinfo" />
+    <None Include="Service References\MasterService\configuration.svcinfo" />
+    <None Include="Service References\LCTSRV\configuration91.svcinfo" />
+    <None Include="Service References\LCTSRV\configuration.svcinfo" />
+    <None Include="Service References\LCTSRV\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.AlfrescoSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.CANBO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.CANBO_DONVI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.CommonSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.CONNGUOI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.CONNGUOI_GIAYTOTUYTHAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DMInAnXD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_CHUCDANH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_CHUCVU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_DANTOC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_DONVI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_DONVI_NGANH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_DONVI_Tree.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_DONVI_V1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_DUONG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_HETHONG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_LINHVUC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_LOAIGIAYTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_LoaiInAnXD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_NHOMDANTOC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_NHOMTHUTUC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_PHUONGXA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_QUANHUYEN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_QUOCGIA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_THUTUCHANHCHINH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_TINHTHANH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_TONGIAO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DM_TRINHDO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DOANHNGHIEP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DonViNganhModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DONVI_HETHONG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DONVI_LDAP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.DUONG_PHUONG_QUAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.EmailSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.E_CAPDONVI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.E_CAPHANHCHINH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.E_LOAICANHAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.E_LOAIDONVI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.E_LOAIHETHONG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.E_VAITROCHUCVU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.GetThongTinHeThongResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.GIAYTOTUYTHAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.HC_SysNotification.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.HETHONG_LIENKETNGOAI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.HETHONG_LINHVUC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.HETHONG_ROLEGROUP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.HTPhimTatChucNang.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.KioskSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.LdapSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.LINHVUC_DONVI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.LINHVUC_USER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.QUANLYHETHONG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.ROLE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.ROLEGROUP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.SlideLichCongTacSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.THAMSO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.THONGTINCANBO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.THONGTINUSER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.THUTUCHANHCHINH_DONVI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.UserChucNang.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.UserRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.USER_MASTER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.USER_MASTERLst.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.USER_MASTERLstCanBo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.VoChucNang.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.VoConNguoi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.VoDonVi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.VoDonViSearch.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.WGGopYSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MasterService\PhongHopKhongGiay.MasterService.ZimbraSetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\MasterService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Properties\DataSources\System.Data.DataSet1.datasource" />
+    <None Include="Service References\MasterService\MasterService.wsdl" />
+    <None Include="Service References\MasterService\MasterService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterService\MasterService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterService\MasterService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterService\MasterService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterService\MasterService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterService\MasterService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterService\MasterService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MasterService\MasterService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\PhongHopKhongGiayService\PhongHopKhongGiay.PhongHopKhongGiayService.DANHMUC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PhongHopKhongGiayService\PhongHopKhongGiay.PhongHopKhongGiayService.THANHPHANCHUANBI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\PhongHopKhongGiayService\configuration91.svcinfo" />
+    <None Include="Service References\PhongHopKhongGiayService\configuration.svcinfo" />
+    <None Include="Service References\PhongHopKhongGiayService\PhongHopKhongGiayService1.wsdl" />
+    <None Include="Service References\PhongHopKhongGiayService\PhongHopKhongGiayService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PhongHopKhongGiayService\PhongHopKhongGiayService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PhongHopKhongGiayService\PhongHopKhongGiayService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PhongHopKhongGiayService\PhongHopKhongGiayService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PhongHopKhongGiayService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PhongHopKhongGiayService\PhongHopKhongGiayService1.disco" />
+    <Content Include="Service References\ReportService\PhongHopKhongGiay.ReportService.Get_DataReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ReportService\ReportService.wsdl" />
+    <None Include="Service References\ReportService\ReportService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportService\ReportService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportService\ReportService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Schedule\BackEnd.aspx" />
+    <Content Include="Schedule\QuanLy.ascx" />
+    <None Include="Service References\ReportService\ReportService.disco" />
+    <None Include="Service References\ReportService\configuration91.svcinfo" />
+    <None Include="Service References\ReportService\configuration.svcinfo" />
+    <None Include="Service References\ReportService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="TaiLieu\TaiLieuKhac.ascx" />
+    <Content Include="TaiLieu\TaiLieuKhacV2.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoCao\ThongKeCuocHop.ascx.cs">
+      <DependentUpon>ThongKeCuocHop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCao\ThongKeCuocHop.ascx.designer.cs">
+      <DependentUpon>ThongKeCuocHop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BieuQuyetTuDo\BieuQuyetTudo.ascx.cs">
+      <DependentUpon>BieuQuyetTudo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BieuQuyetTuDo\BieuQuyetTudo.ascx.designer.cs">
+      <DependentUpon>BieuQuyetTudo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AlfrescoHelper.cs" />
+    <Compile Include="Common\CacheHelper.cs" />
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\Converter.cs" />
+    <Compile Include="Common\Crypto.cs" />
+    <Compile Include="Common\FirebaseMessage.cs" />
+    <Compile Include="Common\Week.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityBase.cs" />
+    <Compile Include="Models\Firebase\FirebaseMessage.cs" />
+    <Compile Include="Models\LH_LAYYKIENPHONGHOPMAP.cs" />
+    <Compile Include="Models\LH_YEUCAUHOTROPARAM.cs" />
+    <Compile Include="Models\NhacLich_NguoiNhac.cs" />
+    <Compile Include="Models\PagesParamModel.cs" />
+    <Compile Include="Models\TAILIEUCUOCHOP_COQUANCHUTRI_MAP.cs" />
+    <Compile Include="Schedule\LichTV_9.aspx.cs">
+      <DependentUpon>LichTV_9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\LichTV_9.aspx.designer.cs">
+      <DependentUpon>LichTV_9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\LichTV.ascx.cs">
+      <DependentUpon>LichTV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\LichTV.ascx.designer.cs">
+      <DependentUpon>LichTV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyHub.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ExcelStream.cs" />
+    <Compile Include="Report\FindAndInsertHTML.cs" />
+    <Compile Include="Report\Report.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\WordStream.cs" />
+    <Compile Include="Schedule\BackEnd.aspx.cs">
+      <DependentUpon>BackEnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\Backend.aspx.designer.cs">
+      <DependentUpon>BackEnd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\ChuToa.ascx.cs">
+      <DependentUpon>ChuToa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\ChuToa.ascx.designer.cs">
+      <DependentUpon>ChuToa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\DownloadFileUrl.aspx.cs">
+      <DependentUpon>DownloadFileUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\DownloadFileUrl.aspx.designer.cs">
+      <DependentUpon>DownloadFileUrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\DownloadFile.aspx.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\DownloadFile.aspx.designer.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\PheDuyet.ascx.cs">
+      <DependentUpon>PheDuyet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\PheDuyet.ascx.designer.cs">
+      <DependentUpon>PheDuyet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\PageThanhPhanThamDu.ascx.cs">
+      <DependentUpon>PageThanhPhanThamDu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\PageThanhPhanThamDu.ascx.designer.cs">
+      <DependentUpon>PageThanhPhanThamDu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\ChuanBi.ascx.cs">
+      <DependentUpon>ChuanBi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\ChuanBi.ascx.designer.cs">
+      <DependentUpon>ChuanBi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\ChuyenTrang.ascx.cs">
+      <DependentUpon>ChuyenTrang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\ChuyenTrang.ascx.designer.cs">
+      <DependentUpon>ChuyenTrang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\DanhMuc.ascx.cs">
+      <DependentUpon>DanhMuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\DanhMuc.ascx.designer.cs">
+      <DependentUpon>DanhMuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\PhatHanh.ascx.cs">
+      <DependentUpon>PhatHanh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\PhatHanh.ascx.designer.cs">
+      <DependentUpon>PhatHanh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\TaoLich.ascx.cs">
+      <DependentUpon>TaoLich.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\TaoLich.ascx.designer.cs">
+      <DependentUpon>TaoLich.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\ThuKy.ascx.cs">
+      <DependentUpon>ThuKy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\ThuKy.ascx.designer.cs">
+      <DependentUpon>ThuKy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\QuanLy.ascx.cs">
+      <DependentUpon>QuanLy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule\QuanLy.ascx.designer.cs">
+      <DependentUpon>QuanLy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LCTSRV\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MasterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PhongHopKhongGiayService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReportService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="TaiLieu\TaiLieuKhac.ascx.cs">
+      <DependentUpon>TaiLieuKhac.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaiLieu\TaiLieuKhac.ascx.designer.cs">
+      <DependentUpon>TaiLieuKhac.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TaiLieu\TaiLieuKhacV2.ascx.cs">
+      <DependentUpon>TaiLieuKhacV2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaiLieu\TaiLieuKhacV2.ascx.designer.cs">
+      <DependentUpon>TaiLieuKhacV2.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Schedule\Template\Portals\0\Reports\PHKG\Report Store\Word\1\" />
+    <Folder Include="Schedule\Template\QR_Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LCTSRV\" />
+    <WCFMetadataStorage Include="Service References\MasterService\" />
+    <WCFMetadataStorage Include="Service References\PhongHopKhongGiayService\" />
+    <WCFMetadataStorage Include="Service References\ReportService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52748</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52748/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

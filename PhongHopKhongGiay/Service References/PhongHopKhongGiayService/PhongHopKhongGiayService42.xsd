@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PhongHopKhongGiay.SRV.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PhongHopKhongGiay.SRV.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDANHMUC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DANHMUC" nillable="true" type="tns:DANHMUC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDANHMUC" nillable="true" type="tns:ArrayOfDANHMUC" />
+  <xs:complexType name="DANHMUC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ma" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ten" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DANHMUC" nillable="true" type="tns:DANHMUC" />
+  <xs:complexType name="ArrayOfTHANHPHANCHUANBI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="THANHPHANCHUANBI" nillable="true" type="tns:THANHPHANCHUANBI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTHANHPHANCHUANBI" nillable="true" type="tns:ArrayOfTHANHPHANCHUANBI" />
+  <xs:complexType name="THANHPHANCHUANBI">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DANHMUC">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TenGoiTrongCoQuan" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TenVietTat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TenVietTatDonVi" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="THANHPHANCHUANBI" nillable="true" type="tns:THANHPHANCHUANBI" />
+</xs:schema>

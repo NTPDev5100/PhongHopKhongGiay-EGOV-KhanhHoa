@@ -1,0 +1,1921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PhongHopKhongGiayService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PhongHopKhongGiay.SRV.Entities" />
+      <xsd:import schemaLocation="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_DanhMuc_InputMessage">
+    <wsdl:part name="parameters" element="tns:Load_DanhMuc" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_DanhMuc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Load_DanhMucResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_USER_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:Load_USER_GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_USER_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Load_USER_GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_ThanhPhanChuanBi_InputMessage">
+    <wsdl:part name="parameters" element="tns:Load_ThanhPhanChuanBi" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_ThanhPhanChuanBi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Load_ThanhPhanChuanBiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_DanhSachTaiLieuCuocHopByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_DanhSachTaiLieuCuocHopByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_DanhSachTaiLieuCuocHopByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_DanhSachTaiLieuCuocHopByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_DanhSachTaiLieuByTempID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Load_DanhSachTaiLieuByTempID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_DanhSachTaiLieuByTempID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Load_DanhSachTaiLieuByTempIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_CN_TAILIEU_UpdateLichHopIDByIDTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:CN_TAILIEU_UpdateLichHopIDByIDTemp" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_CN_TAILIEU_UpdateLichHopIDByIDTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CN_TAILIEU_UpdateLichHopIDByIDTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_CN_TAILIEU_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:CN_TAILIEU_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_CN_TAILIEU_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CN_TAILIEU_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUCUOCHOP_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUCUOCHOP_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LichHop_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LichHop_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LichHop_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LichHop_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_ChuyenDuyet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_ChuyenDuyet" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_ChuyenDuyet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_ChuyenDuyetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_CN_Load_DanhSachTaiLieuByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CN_Load_DanhSachTaiLieuByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_CN_Load_DanhSachTaiLieuByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CN_Load_DanhSachTaiLieuByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadLichHopByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadLichHopByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadLichHopByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadLichHopByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_Schedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_Schedule" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_Schedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_ScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_Schedule_CaNhan_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_Schedule_CaNhan" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_Schedule_CaNhan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_Schedule_CaNhanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_DanhSach_Schedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_DanhSach_Schedule" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_DanhSach_Schedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_DanhSach_ScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_ChuongTrinhHop_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_ChuongTrinhHop_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_ChuongTrinhHop_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_ChuongTrinhHop_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_BieuQuyet_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_BieuQuyet_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_BieuQuyet_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_BieuQuyet_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_DM_DANHMUC_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DANHMUC_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_DM_DANHMUC_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DM_DANHMUC_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadBieuQuyetByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadBieuQuyetByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadBieuQuyetByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadBieuQuyetByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangByChuoiLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangByChuoiLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangByChuoiLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangByChuoiLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangBatDauHoacKetThucLichHop_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangBatDauHoacKetThucLichHop" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangBatDauHoacKetThucLichHop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangBatDauHoacKetThucLichHopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTimeDragAndDropSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTimeDragAndDropSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTimeDragAndDropSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTimeDragAndDropScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateShowShowKiosk_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateShowShowKiosk" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateShowShowKiosk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateShowShowKioskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadDataTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadDataTable" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadDataTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_CheckTrungLichHopByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_CheckTrungLichHopByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_CheckTrungLichHopByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_CheckTrungLichHopByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetPhongBanSuDung_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetPhongBanSuDung" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetPhongBanSuDung_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetPhongBanSuDungResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetNguoiChuTriDangDieuHanhCuocHop_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetNguoiChuTriDangDieuHanhCuocHop" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetNguoiChuTriDangDieuHanhCuocHop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetNguoiChuTriDangDieuHanhCuocHopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadChuongTrinhHopByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadChuongTrinhHopByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadChuongTrinhHopByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadChuongTrinhHopByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_THAOLUAN_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_THAOLUAN_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_THAOLUAN_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_THAOLUAN_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadThaoLuanByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadThaoLuanByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadThaoLuanByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadThaoLuanByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GIAYMOIHOP_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GIAYMOIHOP_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GIAYMOIHOP_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GIAYMOIHOP_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadGiayMoiHopByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadGiayMoiHopByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadGiayMoiHopByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadGiayMoiHopByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetEmailThanhPhanThamDuTheoThoiGian_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetEmailThanhPhanThamDuTheoThoiGian" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetEmailThanhPhanThamDuTheoThoiGian_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetEmailThanhPhanThamDuTheoThoiGianResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_PhatHanh_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_PhatHanh_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_PhatHanh_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_PhatHanh_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadPhatHanhByThoiGian_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadPhatHanhByThoiGian" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadPhatHanhByThoiGian_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadPhatHanhByThoiGianResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadNoiDungInAnTheoThoiGian_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadNoiDungInAnTheoThoiGian" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadNoiDungInAnTheoThoiGian_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadNoiDungInAnTheoThoiGianResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetLichHopIDTheoThoiGian_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetLichHopIDTheoThoiGian" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetLichHopIDTheoThoiGian_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetLichHopIDTheoThoiGianResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_PhatHanhLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_PhatHanhLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_PhatHanhLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_PhatHanhLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadPhatHanhLichSuTheoThoiGian_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadPhatHanhLichSuTheoThoiGian" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadPhatHanhLichSuTheoThoiGian_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadPhatHanhLichSuTheoThoiGianResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_PhatHanhTrucTiep_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_PhatHanhTrucTiep" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_PhatHanhTrucTiep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_PhatHanhTrucTiepResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_BAOVANG_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_BAOVANG_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_BAOVANG_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_BAOVANG_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_XUNGDOT_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_XUNGDOT_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_XUNGDOT_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_XUNGDOT_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_CHAPNHAN_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_CHAPNHAN_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_CHAPNHAN_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_CHAPNHAN_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_TUCHOIHOP_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_TUCHOIHOP_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_TUCHOIHOP_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_TUCHOIHOP_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_BIEUQUYET_KETQUA_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_BIEUQUYET_KETQUA_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_BIEUQUYET_KETQUA_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_BIEUQUYET_KETQUA_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_BIEUQUYET_GetByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_BIEUQUYET_GetByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_BIEUQUYET_GetByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_BIEUQUYET_GetByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_CN_Load_DanhSachTaiLieuByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CN_Load_DanhSachTaiLieuByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_CN_Load_DanhSachTaiLieuByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CN_Load_DanhSachTaiLieuByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_CN_TAILIEU_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_CN_TAILIEU_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_CN_TAILIEU_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_CN_TAILIEU_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_CN_TAILIEU_CHIASE_Ins_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_CN_TAILIEU_CHIASE_Ins" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_CN_TAILIEU_CHIASE_Ins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_CN_TAILIEU_CHIASE_InsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangCuocHop_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangCuocHop" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTinhTrangCuocHop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTinhTrangCuocHopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadDangKyPhatBieuTheoLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadDangKyPhatBieuTheoLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadDangKyPhatBieuTheoLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadDangKyPhatBieuTheoLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DANGKYPHATBIEU_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DANGKYPHATBIEU_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DANGKYPHATBIEU_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DANGKYPHATBIEU_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateDoUuTienDangKyPhatBieu_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateDoUuTienDangKyPhatBieu" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateDoUuTienDangKyPhatBieu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateDoUuTienDangKyPhatBieuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UPDATE_THOIGIAN_DANGKYPHATBIEU_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UPDATE_THOIGIAN_DANGKYPHATBIEU" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UPDATE_THOIGIAN_DANGKYPHATBIEU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UPDATE_THOIGIAN_DANGKYPHATBIEUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadBienBanHopByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadBienBanHopByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadBienBanHopByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadBienBanHopByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_BIENBANHOP_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_BIENBANHOP_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_BIENBANHOP_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_BIENBANHOP_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GiaoViec_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GiaoViec_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GiaoViec_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GiaoViec_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GiaoViec_UpdateChiTietGiaoViec_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GiaoViec_UpdateChiTietGiaoViec" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GiaoViec_UpdateChiTietGiaoViec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GiaoViec_UpdateChiTietGiaoViecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadGiaoViecTheoLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadGiaoViecTheoLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadGiaoViecTheoLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadGiaoViecTheoLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_NOIDUNG_IN_AN_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_NOIDUNG_IN_AN_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_NOIDUNG_IN_AN_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_NOIDUNG_IN_AN_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TRIGGER_SIGNALR_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TRIGGER_SIGNALR" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TRIGGER_SIGNALR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TRIGGER_SIGNALRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_InLichHopTheoTuan_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_InLichHopTheoTuan" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_InLichHopTheoTuan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_InLichHopTheoTuanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_InKetLuanTheoLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_InKetLuanTheoLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_InKetLuanTheoLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_InKetLuanTheoLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_DUYETBAOVANG_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_DUYETBAOVANG_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Mobile_LH_LICHHOP_DUYETBAOVANG_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Mobile_LH_LICHHOP_DUYETBAOVANG_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUKETLUAN_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUKETLUAN_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUKETLUAN_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUKETLUAN_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_CheckRoleByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_CheckRoleByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_CheckRoleByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_CheckRoleByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadYeuCauHoTroByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadYeuCauHoTroByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadYeuCauHoTroByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadYeuCauHoTroByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_YeuCauHoTro_XuLyYeuCau_Upd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_YeuCauHoTro_XuLyYeuCau_Upd" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_YeuCauHoTro_XuLyYeuCau_Upd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_YeuCauHoTro_XuLyYeuCau_UpdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_YeuCauHoTro_Del_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_YeuCauHoTro_Del" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_YeuCauHoTro_Del_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_YeuCauHoTro_DelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadLayYKienPhongHopByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadLayYKienPhongHopByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_LoadLayYKienPhongHopByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_LoadLayYKienPhongHopByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBao_ByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DanhSachNguoiNhanThongBao_ByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBao_ByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DanhSachNguoiNhanThongBao_ByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetDSThongKeCuocHop_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetDSThongKeCuocHop" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetDSThongKeCuocHop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetDSThongKeCuocHopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Them_LHThuMuc_InputMessage">
+    <wsdl:part name="parameters" element="tns:Them_LHThuMuc" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Them_LHThuMuc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Them_LHThuMucResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Update_LHThuMuc_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update_LHThuMuc" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Update_LHThuMuc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Update_LHThuMucResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Delete_LHThuMuc_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_LHThuMuc" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Delete_LHThuMuc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_LHThuMucResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_ListThuMuc_InputMessage">
+    <wsdl:part name="parameters" element="tns:Load_ListThuMuc" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_ListThuMuc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Load_ListThuMucResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetDSTaiLieuKhac_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetDSTaiLieuKhac" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetDSTaiLieuKhac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetDSTaiLieuKhacResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetDSTaiLieuKhacV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetDSTaiLieuKhacV2" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetDSTaiLieuKhacV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetDSTaiLieuKhacV2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_ListTenTaiLieu_InputMessage">
+    <wsdl:part name="parameters" element="tns:Load_ListTenTaiLieu" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_Load_ListTenTaiLieu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Load_ListTenTaiLieuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUKHACV2_InsUpDel_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUKHACV2_InsUpDel" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_TAILIEUKHACV2_InsUpDel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_TAILIEUKHACV2_InsUpDelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_ThemTaiLieuKhac_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_ThemTaiLieuKhac" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_ThemTaiLieuKhac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_ThemTaiLieuKhacResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateFileTaiLieuKhac_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateFileTaiLieuKhac" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateFileTaiLieuKhac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateFileTaiLieuKhacResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTaiLieuKhac_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTaiLieuKhac" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateTaiLieuKhac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateTaiLieuKhacResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DeleteTaiLieuKhac_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DeleteTaiLieuKhac" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DeleteTaiLieuKhac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DeleteTaiLieuKhacResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetDSBieuQuyetTuDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetDSBieuQuyetTuDo" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_GetDSBieuQuyetTuDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_GetDSBieuQuyetTuDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetID" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_ThemBieuQuyetTuDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_ThemBieuQuyetTuDo" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_ThemBieuQuyetTuDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_ThemBieuQuyetTuDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateBieuQuyetTuDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateBieuQuyetTuDo" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_UpdateBieuQuyetTuDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_UpdateBieuQuyetTuDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DeleteBieuQuyetTuDo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DeleteBieuQuyetTuDo" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_DeleteBieuQuyetTuDo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_DeleteBieuQuyetTuDoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_CheckThoiGianChuongTrinhHop_InputMessage">
+    <wsdl:part name="parameters" element="tns:LH_CheckThoiGianChuongTrinhHop" />
+  </wsdl:message>
+  <wsdl:message name="IPhongHopKhongGiayService_LH_CheckThoiGianChuongTrinhHop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LH_CheckThoiGianChuongTrinhHopResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPhongHopKhongGiayService">
+    <wsdl:operation name="Load_DanhMuc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_DanhMuc" message="tns:IPhongHopKhongGiayService_Load_DanhMuc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_DanhMucResponse" message="tns:IPhongHopKhongGiayService_Load_DanhMuc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_USER_GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_USER_GetAllUsers" message="tns:IPhongHopKhongGiayService_Load_USER_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_USER_GetAllUsersResponse" message="tns:IPhongHopKhongGiayService_Load_USER_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_ThanhPhanChuanBi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_ThanhPhanChuanBi" message="tns:IPhongHopKhongGiayService_Load_ThanhPhanChuanBi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_ThanhPhanChuanBiResponse" message="tns:IPhongHopKhongGiayService_Load_ThanhPhanChuanBi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_DanhSachTaiLieuCuocHopByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSachTaiLieuCuocHopByLichHopID" message="tns:IPhongHopKhongGiayService_LH_Load_DanhSachTaiLieuCuocHopByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSachTaiLieuCuocHopByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_Load_DanhSachTaiLieuCuocHopByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_DanhSachTaiLieuByTempID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_DanhSachTaiLieuByTempID" message="tns:IPhongHopKhongGiayService_Load_DanhSachTaiLieuByTempID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_DanhSachTaiLieuByTempIDResponse" message="tns:IPhongHopKhongGiayService_Load_DanhSachTaiLieuByTempID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CN_TAILIEU_UpdateLichHopIDByIDTemp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/CN_TAILIEU_UpdateLichHopIDByIDTemp" message="tns:IPhongHopKhongGiayService_CN_TAILIEU_UpdateLichHopIDByIDTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/CN_TAILIEU_UpdateLichHopIDByIDTempResponse" message="tns:IPhongHopKhongGiayService_CN_TAILIEU_UpdateLichHopIDByIDTemp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CN_TAILIEU_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/CN_TAILIEU_InsUpDel" message="tns:IPhongHopKhongGiayService_CN_TAILIEU_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/CN_TAILIEU_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_CN_TAILIEU_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUCUOCHOP_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LichHop_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LichHop_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_LichHop_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LichHop_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_LichHop_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_ChuyenDuyet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_ChuyenDuyet" message="tns:IPhongHopKhongGiayService_LH_ChuyenDuyet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_ChuyenDuyetResponse" message="tns:IPhongHopKhongGiayService_LH_ChuyenDuyet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CN_Load_DanhSachTaiLieuByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/CN_Load_DanhSachTaiLieuByLichHopID" message="tns:IPhongHopKhongGiayService_CN_Load_DanhSachTaiLieuByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/CN_Load_DanhSachTaiLieuByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_CN_Load_DanhSachTaiLieuByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadLichHopByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadLichHopByLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadLichHopByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadLichHopByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadLichHopByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_Schedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_Schedule" message="tns:IPhongHopKhongGiayService_LH_Load_Schedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_ScheduleResponse" message="tns:IPhongHopKhongGiayService_LH_Load_Schedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_Schedule_CaNhan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_Schedule_CaNhan" message="tns:IPhongHopKhongGiayService_LH_Load_Schedule_CaNhan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_Schedule_CaNhanResponse" message="tns:IPhongHopKhongGiayService_LH_Load_Schedule_CaNhan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_DanhSach_Schedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSach_Schedule" message="tns:IPhongHopKhongGiayService_LH_Load_DanhSach_Schedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSach_ScheduleResponse" message="tns:IPhongHopKhongGiayService_LH_Load_DanhSach_Schedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_ChuongTrinhHop_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_ChuongTrinhHop_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_ChuongTrinhHop_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_ChuongTrinhHop_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_ChuongTrinhHop_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_BieuQuyet_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_BieuQuyet_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_BieuQuyet_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_BieuQuyet_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_BieuQuyet_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DM_DANHMUC_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/DM_DANHMUC_InsUpDel" message="tns:IPhongHopKhongGiayService_DM_DANHMUC_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/DM_DANHMUC_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_DM_DANHMUC_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadBieuQuyetByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadBieuQuyetByLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadBieuQuyetByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadBieuQuyetByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadBieuQuyetByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangByLichHopID" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangByChuoiLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangByChuoiLichHopID" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangByChuoiLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangByChuoiLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangByChuoiLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangBatDauHoacKetThucLichHop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangBatDauHoacKetThucLichHop" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangBatDauHoacKetThucLichHop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangBatDauHoacKetThucLichHopResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangBatDauHoacKetThucLichHop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanID" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanIDResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTimeDragAndDropSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTimeDragAndDropSchedule" message="tns:IPhongHopKhongGiayService_LH_UpdateTimeDragAndDropSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTimeDragAndDropScheduleResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateTimeDragAndDropSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateShowShowKiosk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateShowShowKiosk" message="tns:IPhongHopKhongGiayService_LH_UpdateShowShowKiosk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateShowShowKioskResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateShowShowKiosk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadDataTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadDataTable" message="tns:IPhongHopKhongGiayService_LH_LoadDataTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadDataTableResponse" message="tns:IPhongHopKhongGiayService_LH_LoadDataTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_CheckTrungLichHopByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_CheckTrungLichHopByUserID" message="tns:IPhongHopKhongGiayService_LH_CheckTrungLichHopByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_CheckTrungLichHopByUserIDResponse" message="tns:IPhongHopKhongGiayService_LH_CheckTrungLichHopByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetPhongBanSuDung">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetPhongBanSuDung" message="tns:IPhongHopKhongGiayService_LH_GetPhongBanSuDung_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetPhongBanSuDungResponse" message="tns:IPhongHopKhongGiayService_LH_GetPhongBanSuDung_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetNguoiChuTriDangDieuHanhCuocHop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetNguoiChuTriDangDieuHanhCuocHop" message="tns:IPhongHopKhongGiayService_LH_GetNguoiChuTriDangDieuHanhCuocHop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetNguoiChuTriDangDieuHanhCuocHopResponse" message="tns:IPhongHopKhongGiayService_LH_GetNguoiChuTriDangDieuHanhCuocHop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadChuongTrinhHopByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadChuongTrinhHopByLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadChuongTrinhHopByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadChuongTrinhHopByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadChuongTrinhHopByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_THAOLUAN_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_THAOLUAN_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_THAOLUAN_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_THAOLUAN_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_THAOLUAN_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadThaoLuanByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadThaoLuanByLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadThaoLuanByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadThaoLuanByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadThaoLuanByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GIAYMOIHOP_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GIAYMOIHOP_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_GIAYMOIHOP_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GIAYMOIHOP_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_GIAYMOIHOP_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadGiayMoiHopByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadGiayMoiHopByLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadGiayMoiHopByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadGiayMoiHopByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadGiayMoiHopByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetEmailThanhPhanThamDuTheoThoiGian">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetEmailThanhPhanThamDuTheoThoiGian" message="tns:IPhongHopKhongGiayService_LH_GetEmailThanhPhanThamDuTheoThoiGian_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetEmailThanhPhanThamDuTheoThoiGianResponse" message="tns:IPhongHopKhongGiayService_LH_GetEmailThanhPhanThamDuTheoThoiGian_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_PhatHanh_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_PhatHanh_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_PhatHanh_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_PhatHanh_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_PhatHanh_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadPhatHanhByThoiGian">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadPhatHanhByThoiGian" message="tns:IPhongHopKhongGiayService_LH_LoadPhatHanhByThoiGian_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadPhatHanhByThoiGianResponse" message="tns:IPhongHopKhongGiayService_LH_LoadPhatHanhByThoiGian_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadNoiDungInAnTheoThoiGian">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadNoiDungInAnTheoThoiGian" message="tns:IPhongHopKhongGiayService_LH_LoadNoiDungInAnTheoThoiGian_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadNoiDungInAnTheoThoiGianResponse" message="tns:IPhongHopKhongGiayService_LH_LoadNoiDungInAnTheoThoiGian_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetLichHopIDTheoThoiGian">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetLichHopIDTheoThoiGian" message="tns:IPhongHopKhongGiayService_LH_GetLichHopIDTheoThoiGian_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetLichHopIDTheoThoiGianResponse" message="tns:IPhongHopKhongGiayService_LH_GetLichHopIDTheoThoiGian_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_PhatHanhLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_PhatHanhLichHopID" message="tns:IPhongHopKhongGiayService_LH_PhatHanhLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_PhatHanhLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_PhatHanhLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadPhatHanhLichSuTheoThoiGian">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadPhatHanhLichSuTheoThoiGian" message="tns:IPhongHopKhongGiayService_LH_LoadPhatHanhLichSuTheoThoiGian_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadPhatHanhLichSuTheoThoiGianResponse" message="tns:IPhongHopKhongGiayService_LH_LoadPhatHanhLichSuTheoThoiGian_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_PhatHanhTrucTiep">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_PhatHanhTrucTiep" message="tns:IPhongHopKhongGiayService_LH_PhatHanhTrucTiep_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_PhatHanhTrucTiepResponse" message="tns:IPhongHopKhongGiayService_LH_PhatHanhTrucTiep_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_BAOVANG_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_BAOVANG_Upd" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_BAOVANG_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_BAOVANG_UpdResponse" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_BAOVANG_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_XUNGDOT_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_XUNGDOT_Upd" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_XUNGDOT_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_XUNGDOT_UpdResponse" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_XUNGDOT_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_CHAPNHAN_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_CHAPNHAN_Upd" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_CHAPNHAN_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_CHAPNHAN_UpdResponse" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_CHAPNHAN_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_TUCHOIHOP_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_TUCHOIHOP_Upd" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_TUCHOIHOP_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_TUCHOIHOP_UpdResponse" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_TUCHOIHOP_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_BIEUQUYET_KETQUA_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_BIEUQUYET_KETQUA_Ins" message="tns:IPhongHopKhongGiayService_Mobile_LH_BIEUQUYET_KETQUA_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_BIEUQUYET_KETQUA_InsResponse" message="tns:IPhongHopKhongGiayService_Mobile_LH_BIEUQUYET_KETQUA_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_BIEUQUYET_GetByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_BIEUQUYET_GetByLichHopID" message="tns:IPhongHopKhongGiayService_LH_BIEUQUYET_GetByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_BIEUQUYET_GetByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_BIEUQUYET_GetByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CN_Load_DanhSachTaiLieuByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/CN_Load_DanhSachTaiLieuByUserID" message="tns:IPhongHopKhongGiayService_CN_Load_DanhSachTaiLieuByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/CN_Load_DanhSachTaiLieuByUserIDResponse" message="tns:IPhongHopKhongGiayService_CN_Load_DanhSachTaiLieuByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_CN_TAILIEU_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_CN_TAILIEU_Ins" message="tns:IPhongHopKhongGiayService_Mobile_CN_TAILIEU_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_CN_TAILIEU_InsResponse" message="tns:IPhongHopKhongGiayService_Mobile_CN_TAILIEU_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_CN_TAILIEU_CHIASE_Ins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_CN_TAILIEU_CHIASE_Ins" message="tns:IPhongHopKhongGiayService_Mobile_CN_TAILIEU_CHIASE_Ins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_CN_TAILIEU_CHIASE_InsResponse" message="tns:IPhongHopKhongGiayService_Mobile_CN_TAILIEU_CHIASE_Ins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangCuocHop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangCuocHop" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangCuocHop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangCuocHopResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateTinhTrangCuocHop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadDangKyPhatBieuTheoLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadDangKyPhatBieuTheoLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadDangKyPhatBieuTheoLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadDangKyPhatBieuTheoLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadDangKyPhatBieuTheoLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_DANGKYPHATBIEU_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DANGKYPHATBIEU_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_DANGKYPHATBIEU_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DANGKYPHATBIEU_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_DANGKYPHATBIEU_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateDoUuTienDangKyPhatBieu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateDoUuTienDangKyPhatBieu" message="tns:IPhongHopKhongGiayService_LH_UpdateDoUuTienDangKyPhatBieu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateDoUuTienDangKyPhatBieuResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateDoUuTienDangKyPhatBieu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UPDATE_THOIGIAN_DANGKYPHATBIEU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UPDATE_THOIGIAN_DANGKYPHATBIEU" message="tns:IPhongHopKhongGiayService_LH_UPDATE_THOIGIAN_DANGKYPHATBIEU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UPDATE_THOIGIAN_DANGKYPHATBIEUResponse" message="tns:IPhongHopKhongGiayService_LH_UPDATE_THOIGIAN_DANGKYPHATBIEU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadBienBanHopByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadBienBanHopByLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadBienBanHopByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadBienBanHopByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadBienBanHopByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_BIENBANHOP_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_BIENBANHOP_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_BIENBANHOP_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_BIENBANHOP_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_BIENBANHOP_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GiaoViec_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GiaoViec_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_GiaoViec_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GiaoViec_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_GiaoViec_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GiaoViec_UpdateChiTietGiaoViec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GiaoViec_UpdateChiTietGiaoViec" message="tns:IPhongHopKhongGiayService_LH_GiaoViec_UpdateChiTietGiaoViec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GiaoViec_UpdateChiTietGiaoViecResponse" message="tns:IPhongHopKhongGiayService_LH_GiaoViec_UpdateChiTietGiaoViec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadGiaoViecTheoLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadGiaoViecTheoLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadGiaoViecTheoLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadGiaoViecTheoLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadGiaoViecTheoLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_NOIDUNG_IN_AN_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_NOIDUNG_IN_AN_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_NOIDUNG_IN_AN_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_NOIDUNG_IN_AN_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_NOIDUNG_IN_AN_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_TRIGGER_SIGNALR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TRIGGER_SIGNALR" message="tns:IPhongHopKhongGiayService_LH_TRIGGER_SIGNALR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TRIGGER_SIGNALRResponse" message="tns:IPhongHopKhongGiayService_LH_TRIGGER_SIGNALR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_InLichHopTheoTuan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_InLichHopTheoTuan" message="tns:IPhongHopKhongGiayService_LH_InLichHopTheoTuan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_InLichHopTheoTuanResponse" message="tns:IPhongHopKhongGiayService_LH_InLichHopTheoTuan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetID" message="tns:IPhongHopKhongGiayService_LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_InKetLuanTheoLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_InKetLuanTheoLichHopID" message="tns:IPhongHopKhongGiayService_LH_InKetLuanTheoLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_InKetLuanTheoLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_InKetLuanTheoLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_DUYETBAOVANG_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_DUYETBAOVANG_Upd" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_DUYETBAOVANG_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_DUYETBAOVANG_UpdResponse" message="tns:IPhongHopKhongGiayService_Mobile_LH_LICHHOP_DUYETBAOVANG_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUKETLUAN_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUKETLUAN_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_TAILIEUKETLUAN_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUKETLUAN_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_TAILIEUKETLUAN_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_CheckRoleByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_CheckRoleByUserID" message="tns:IPhongHopKhongGiayService_LH_CheckRoleByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_CheckRoleByUserIDResponse" message="tns:IPhongHopKhongGiayService_LH_CheckRoleByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopID" message="tns:IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopID" message="tns:IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopID" message="tns:IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadYeuCauHoTroByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadYeuCauHoTroByLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadYeuCauHoTroByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadYeuCauHoTroByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadYeuCauHoTroByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_YeuCauHoTro_XuLyYeuCau_Upd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_YeuCauHoTro_XuLyYeuCau_Upd" message="tns:IPhongHopKhongGiayService_LH_YeuCauHoTro_XuLyYeuCau_Upd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_YeuCauHoTro_XuLyYeuCau_UpdResponse" message="tns:IPhongHopKhongGiayService_LH_YeuCauHoTro_XuLyYeuCau_Upd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_YeuCauHoTro_Del">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_YeuCauHoTro_Del" message="tns:IPhongHopKhongGiayService_LH_YeuCauHoTro_Del_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_YeuCauHoTro_DelResponse" message="tns:IPhongHopKhongGiayService_LH_YeuCauHoTro_Del_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadLayYKienPhongHopByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadLayYKienPhongHopByLichHopID" message="tns:IPhongHopKhongGiayService_LH_LoadLayYKienPhongHopByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadLayYKienPhongHopByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_LoadLayYKienPhongHopByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_DanhSachNguoiNhanThongBao_ByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBao_ByLichHopID" message="tns:IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBao_ByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBao_ByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBao_ByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetDSThongKeCuocHop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSThongKeCuocHop" message="tns:IPhongHopKhongGiayService_LH_GetDSThongKeCuocHop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSThongKeCuocHopResponse" message="tns:IPhongHopKhongGiayService_LH_GetDSThongKeCuocHop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopID" message="tns:IPhongHopKhongGiayService_LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopID" message="tns:IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopID" message="tns:IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopID" message="tns:IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopIDResponse" message="tns:IPhongHopKhongGiayService_LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Them_LHThuMuc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Them_LHThuMuc" message="tns:IPhongHopKhongGiayService_Them_LHThuMuc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Them_LHThuMucResponse" message="tns:IPhongHopKhongGiayService_Them_LHThuMuc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_LHThuMuc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Update_LHThuMuc" message="tns:IPhongHopKhongGiayService_Update_LHThuMuc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Update_LHThuMucResponse" message="tns:IPhongHopKhongGiayService_Update_LHThuMuc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_LHThuMuc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Delete_LHThuMuc" message="tns:IPhongHopKhongGiayService_Delete_LHThuMuc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Delete_LHThuMucResponse" message="tns:IPhongHopKhongGiayService_Delete_LHThuMuc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_ListThuMuc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_ListThuMuc" message="tns:IPhongHopKhongGiayService_Load_ListThuMuc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_ListThuMucResponse" message="tns:IPhongHopKhongGiayService_Load_ListThuMuc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetDSTaiLieuKhac">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSTaiLieuKhac" message="tns:IPhongHopKhongGiayService_LH_GetDSTaiLieuKhac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSTaiLieuKhacResponse" message="tns:IPhongHopKhongGiayService_LH_GetDSTaiLieuKhac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetDSTaiLieuKhacV2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSTaiLieuKhacV2" message="tns:IPhongHopKhongGiayService_LH_GetDSTaiLieuKhacV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSTaiLieuKhacV2Response" message="tns:IPhongHopKhongGiayService_LH_GetDSTaiLieuKhacV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_ListTenTaiLieu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_ListTenTaiLieu" message="tns:IPhongHopKhongGiayService_Load_ListTenTaiLieu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/Load_ListTenTaiLieuResponse" message="tns:IPhongHopKhongGiayService_Load_ListTenTaiLieu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUKHACV2_InsUpDel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUKHACV2_InsUpDel" message="tns:IPhongHopKhongGiayService_LH_TAILIEUKHACV2_InsUpDel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUKHACV2_InsUpDelResponse" message="tns:IPhongHopKhongGiayService_LH_TAILIEUKHACV2_InsUpDel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_ThemTaiLieuKhac">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_ThemTaiLieuKhac" message="tns:IPhongHopKhongGiayService_LH_ThemTaiLieuKhac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_ThemTaiLieuKhacResponse" message="tns:IPhongHopKhongGiayService_LH_ThemTaiLieuKhac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateFileTaiLieuKhac">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateFileTaiLieuKhac" message="tns:IPhongHopKhongGiayService_LH_UpdateFileTaiLieuKhac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateFileTaiLieuKhacResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateFileTaiLieuKhac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTaiLieuKhac">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTaiLieuKhac" message="tns:IPhongHopKhongGiayService_LH_UpdateTaiLieuKhac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTaiLieuKhacResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateTaiLieuKhac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_DeleteTaiLieuKhac">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DeleteTaiLieuKhac" message="tns:IPhongHopKhongGiayService_LH_DeleteTaiLieuKhac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DeleteTaiLieuKhacResponse" message="tns:IPhongHopKhongGiayService_LH_DeleteTaiLieuKhac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetDSBieuQuyetTuDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSBieuQuyetTuDo" message="tns:IPhongHopKhongGiayService_LH_GetDSBieuQuyetTuDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSBieuQuyetTuDoResponse" message="tns:IPhongHopKhongGiayService_LH_GetDSBieuQuyetTuDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetID" message="tns:IPhongHopKhongGiayService_LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetIDResponse" message="tns:IPhongHopKhongGiayService_LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_ThemBieuQuyetTuDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_ThemBieuQuyetTuDo" message="tns:IPhongHopKhongGiayService_LH_ThemBieuQuyetTuDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_ThemBieuQuyetTuDoResponse" message="tns:IPhongHopKhongGiayService_LH_ThemBieuQuyetTuDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateBieuQuyetTuDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateBieuQuyetTuDo" message="tns:IPhongHopKhongGiayService_LH_UpdateBieuQuyetTuDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateBieuQuyetTuDoResponse" message="tns:IPhongHopKhongGiayService_LH_UpdateBieuQuyetTuDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_DeleteBieuQuyetTuDo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DeleteBieuQuyetTuDo" message="tns:IPhongHopKhongGiayService_LH_DeleteBieuQuyetTuDo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_DeleteBieuQuyetTuDoResponse" message="tns:IPhongHopKhongGiayService_LH_DeleteBieuQuyetTuDo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LH_CheckThoiGianChuongTrinhHop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_CheckThoiGianChuongTrinhHop" message="tns:IPhongHopKhongGiayService_LH_CheckThoiGianChuongTrinhHop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPhongHopKhongGiayService/LH_CheckThoiGianChuongTrinhHopResponse" message="tns:IPhongHopKhongGiayService_LH_CheckThoiGianChuongTrinhHop_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicHttpService" type="tns:IPhongHopKhongGiayService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Load_DanhMuc">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Load_DanhMuc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_USER_GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Load_USER_GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_ThanhPhanChuanBi">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Load_ThanhPhanChuanBi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_DanhSachTaiLieuCuocHopByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSachTaiLieuCuocHopByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_DanhSachTaiLieuByTempID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Load_DanhSachTaiLieuByTempID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CN_TAILIEU_UpdateLichHopIDByIDTemp">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/CN_TAILIEU_UpdateLichHopIDByIDTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CN_TAILIEU_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/CN_TAILIEU_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUCUOCHOP_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LichHop_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LichHop_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_ChuyenDuyet">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_ChuyenDuyet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CN_Load_DanhSachTaiLieuByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/CN_Load_DanhSachTaiLieuByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadLichHopByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadLichHopByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_Schedule">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_Schedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_Schedule_CaNhan">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_Schedule_CaNhan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_DanhSach_Schedule">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSach_Schedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_ChuongTrinhHop_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_ChuongTrinhHop_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_BieuQuyet_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_BieuQuyet_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DM_DANHMUC_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/DM_DANHMUC_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadBieuQuyetByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadBieuQuyetByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangByChuoiLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangByChuoiLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangBatDauHoacKetThucLichHop">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangBatDauHoacKetThucLichHop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangPhatHanhByTaiLieuKetLuanID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTimeDragAndDropSchedule">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTimeDragAndDropSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateShowShowKiosk">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateShowShowKiosk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadDataTable">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_CheckTrungLichHopByUserID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_CheckTrungLichHopByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetPhongBanSuDung">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GetPhongBanSuDung" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetNguoiChuTriDangDieuHanhCuocHop">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GetNguoiChuTriDangDieuHanhCuocHop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadChuongTrinhHopByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadChuongTrinhHopByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_THAOLUAN_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_THAOLUAN_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadThaoLuanByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadThaoLuanByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GIAYMOIHOP_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GIAYMOIHOP_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadGiayMoiHopByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadGiayMoiHopByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetEmailThanhPhanThamDuTheoThoiGian">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GetEmailThanhPhanThamDuTheoThoiGian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_PhatHanh_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_PhatHanh_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadPhatHanhByThoiGian">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadPhatHanhByThoiGian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadNoiDungInAnTheoThoiGian">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadNoiDungInAnTheoThoiGian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetLichHopIDTheoThoiGian">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GetLichHopIDTheoThoiGian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_PhatHanhLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_PhatHanhLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadPhatHanhLichSuTheoThoiGian">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadPhatHanhLichSuTheoThoiGian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_PhatHanhTrucTiep">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_PhatHanhTrucTiep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_BAOVANG_Upd">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_BAOVANG_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_XUNGDOT_Upd">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_XUNGDOT_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_CHAPNHAN_Upd">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_CHAPNHAN_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_TUCHOIHOP_Upd">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_TUCHOIHOP_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_BIEUQUYET_KETQUA_Ins">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_BIEUQUYET_KETQUA_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_BIEUQUYET_GetByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_BIEUQUYET_GetByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CN_Load_DanhSachTaiLieuByUserID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/CN_Load_DanhSachTaiLieuByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_CN_TAILIEU_Ins">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Mobile_CN_TAILIEU_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_CN_TAILIEU_CHIASE_Ins">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Mobile_CN_TAILIEU_CHIASE_Ins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTinhTrangCuocHop">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTinhTrangCuocHop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadDangKyPhatBieuTheoLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadDangKyPhatBieuTheoLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_DANGKYPHATBIEU_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_DANGKYPHATBIEU_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateDoUuTienDangKyPhatBieu">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateDoUuTienDangKyPhatBieu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UPDATE_THOIGIAN_DANGKYPHATBIEU">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UPDATE_THOIGIAN_DANGKYPHATBIEU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadBienBanHopByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadBienBanHopByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_BIENBANHOP_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_BIENBANHOP_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GiaoViec_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GiaoViec_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GiaoViec_UpdateChiTietGiaoViec">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GiaoViec_UpdateChiTietGiaoViec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadGiaoViecTheoLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadGiaoViecTheoLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_NOIDUNG_IN_AN_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_NOIDUNG_IN_AN_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_TRIGGER_SIGNALR">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_TRIGGER_SIGNALR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_InLichHopTheoTuan">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_InLichHopTheoTuan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadChiTietBieuQuyetKetQuaTheoBieuQuyetID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_InKetLuanTheoLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_InKetLuanTheoLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mobile_LH_LICHHOP_DUYETBAOVANG_Upd">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Mobile_LH_LICHHOP_DUYETBAOVANG_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUKETLUAN_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUKETLUAN_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_CheckRoleByUserID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_CheckRoleByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_COQUANCHUTRI_GetByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_NOIDUNG_GetByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUCUOCHOP_FILETAILIEU_GetByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadYeuCauHoTroByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadYeuCauHoTroByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_YeuCauHoTro_XuLyYeuCau_Upd">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_YeuCauHoTro_XuLyYeuCau_Upd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_YeuCauHoTro_Del">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_YeuCauHoTro_Del" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_LoadLayYKienPhongHopByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_LoadLayYKienPhongHopByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_DanhSachNguoiNhanThongBao_ByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBao_ByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetDSThongKeCuocHop">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSThongKeCuocHop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSachChiTietThongKeCuocHop_ByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBaoPhatHanh_ByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBaoSuaLichHop_ByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_DanhSachNguoiNhanThongBaoPhatBieu_ByLichHopID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Them_LHThuMuc">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Them_LHThuMuc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_LHThuMuc">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Update_LHThuMuc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_LHThuMuc">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Delete_LHThuMuc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_ListThuMuc">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Load_ListThuMuc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetDSTaiLieuKhac">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSTaiLieuKhac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetDSTaiLieuKhacV2">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSTaiLieuKhacV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_ListTenTaiLieu">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/Load_ListTenTaiLieu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_TAILIEUKHACV2_InsUpDel">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_TAILIEUKHACV2_InsUpDel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_ThemTaiLieuKhac">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_ThemTaiLieuKhac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateFileTaiLieuKhac">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateFileTaiLieuKhac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateTaiLieuKhac">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateTaiLieuKhac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_DeleteTaiLieuKhac">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_DeleteTaiLieuKhac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_GetDSBieuQuyetTuDo">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_GetDSBieuQuyetTuDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetID">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_Load_DanhSachChiTietBieuQuyetTuDo_ByBieuQuyetID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_ThemBieuQuyetTuDo">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_ThemBieuQuyetTuDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_UpdateBieuQuyetTuDo">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_UpdateBieuQuyetTuDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_DeleteBieuQuyetTuDo">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_DeleteBieuQuyetTuDo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LH_CheckThoiGianChuongTrinhHop">
+      <soap:operation soapAction="http://tempuri.org/IPhongHopKhongGiayService/LH_CheckThoiGianChuongTrinhHop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PhongHopKhongGiayService">
+    <wsdl:port name="basicHttpService" binding="tns:basicHttpService">
+      <soap:address location="http://localhost:8091/PhongHopKhongGiay/PhongHopKhongGiayService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities.LichHen" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HanhChinh.SRV.Entities.LichHen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LICHHEN">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChuTriID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiaChiDoanhNghiep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DienThoai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      <xs:element minOccurs="0" name="Duyet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoTen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoTenChuTri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoanTat" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Huy" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDoanhNghiep" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsShowTV" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LanDoiLich" type="xs:int" />
+      <xs:element minOccurs="0" name="LastUpdDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastUpdUserID" type="xs:int" />
+      <xs:element minOccurs="0" name="LichHenID" type="xs:long" />
+      <xs:element minOccurs="0" name="NgayCap" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NgayDoiLich" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NgayHop" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NgaySinh" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NoiDung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhongHopID" type="xs:long" />
+      <xs:element minOccurs="0" name="SoGiayTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TenDoanhNghiep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TenPhong" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LICHHEN" nillable="true" type="tns:LICHHEN" />
+  <xs:complexType name="ArrayOfLICHHENVIEW">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LICHHENVIEW" nillable="true" type="tns:LICHHENVIEW" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLICHHENVIEW" nillable="true" type="tns:ArrayOfLICHHENVIEW" />
+  <xs:complexType name="LICHHENVIEW">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChuTriID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiaChiDoanhNghiep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DienThoai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      <xs:element minOccurs="0" name="Duyet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoTen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoTenChuTri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoanTat" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Huy" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDoanhNghiep" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsShowTV" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LanDoiLich" type="xs:int" />
+      <xs:element minOccurs="0" name="LastUpdDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastUpdUserID" type="xs:int" />
+      <xs:element minOccurs="0" name="LichHenID" type="xs:long" />
+      <xs:element minOccurs="0" name="NgayCap" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NgayDoiLich" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NgayHop" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NgaySinh" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NoiDung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhongHopID" type="xs:long" />
+      <xs:element minOccurs="0" name="SoGiayTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoLuongTrung" type="xs:int" />
+      <xs:element minOccurs="0" name="TenDoanhNghiep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TenPhong" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LICHHENVIEW" nillable="true" type="tns:LICHHENVIEW" />
+  <xs:complexType name="ThongTinTimKiem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DenNgay" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Loai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageNum" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="TuNgay" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThongTinTimKiem" nillable="true" type="tns:ThongTinTimKiem" />
+  <xs:complexType name="ArrayOfLichHenThongKe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LichHenThongKe" nillable="true" type="tns:LichHenThongKe" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLichHenThongKe" nillable="true" type="tns:ArrayOfLichHenThongKe" />
+  <xs:complexType name="LichHenThongKe">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CGQ" type="xs:int" />
+      <xs:element minOccurs="0" name="ChuaNhan" type="xs:int" />
+      <xs:element minOccurs="0" name="DGQ" type="xs:int" />
+      <xs:element minOccurs="0" name="DaNhan" type="xs:int" />
+      <xs:element minOccurs="0" name="Doi" type="xs:int" />
+      <xs:element minOccurs="0" name="Huy" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ten" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LichHenThongKe" nillable="true" type="tns:LichHenThongKe" />
+</xs:schema>

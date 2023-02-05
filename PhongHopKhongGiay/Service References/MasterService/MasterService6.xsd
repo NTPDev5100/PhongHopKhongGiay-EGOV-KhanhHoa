@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" />
+  <xs:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DungChung.Entities.OrmLiteDomain.Master" />
+  <xs:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DungChung.Entities.Models" />
+  <xs:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:9092/DungChung/MasterService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/DungChung.Entities" />
+  <xs:element name="SetEmailSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="emailSetting" nillable="true" type="q1:EmailSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetEmailSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetEmailSettingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKioskSetting">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKioskSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="GetKioskSettingResult" nillable="true" type="q2:KioskSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetKioskSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="kioskSetting" nillable="true" type="q3:KioskSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetKioskSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetKioskSettingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLdapSetting">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLdapSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="GetLdapSettingResult" nillable="true" type="q4:LdapSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLdapSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="ldapSetting" nillable="true" type="q5:LdapSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLdapSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetLdapSettingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonSetting">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="GetCommonSettingResult" nillable="true" type="q6:CommonSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCommonSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="commonSetting" nillable="true" type="q7:CommonSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCommonSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetCommonSettingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWgGopYSetting">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWgGopYSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="GetWgGopYSettingResult" nillable="true" type="q8:WGGopYSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetWgGopYSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="wgGopYSetting" nillable="true" type="q9:WGGopYSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetWgGopYSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetWgGopYSettingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSlideLichCongTacSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSlideLichCongTacSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="GetSlideLichCongTacSettingResult" nillable="true" type="q10:SlideLichCongTacSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSlideLichCongTacSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViId" type="xs:long" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="setting" nillable="true" type="q11:SlideLichCongTacSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSlideLichCongTacSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetSlideLichCongTacSettingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDsDonViNganh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maNganh" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="donviId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDsDonViNganhResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/DungChung.Entities.OrmLiteDomain.Master" minOccurs="0" name="GetDsDonViNganhResult" nillable="true" type="q12:ArrayOfDM_DONVI_NGANH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDsDonViNganhModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maNganh" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="donViId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDsDonViNganhModelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/DungChung.Entities.Models" minOccurs="0" name="GetDsDonViNganhModelResult" nillable="true" type="q13:ArrayOfDonViNganhModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDonViNganh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donVi" type="xs:long" />
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dsMaNganh" nillable="true" type="q14:ArrayOfint" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dsMaNganhRemoved" nillable="true" type="q15:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDonViNganhResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateThuTucHanhChinhDonVi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="thutuchanhchinhDonvi" nillable="true" type="q16:THUTUCHANHCHINH_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateThuTucHanhChinhDonViResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateThuTucHanhChinhDonViResult" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsThuTucHanhChinhDonVi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="thutuchanhchinhDonvi" nillable="true" type="q17:THUTUCHANHCHINH_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsThuTucHanhChinhDonViResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsThuTucHanhChinhDonViResult" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckExistThuTucHanhChinhDonVi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="thutuchanhchinhDonvi" nillable="true" type="q18:THUTUCHANHCHINH_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckExistThuTucHanhChinhDonViResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckExistThuTucHanhChinhDonViResult" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GethuTucHanhChinhDonViByConditions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="thuTucHanhChinhDonVi" nillable="true" type="q19:THUTUCHANHCHINH_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GethuTucHanhChinhDonViByConditionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GethuTucHanhChinhDonViByConditionsResult" nillable="true" type="q20:THUTUCHANHCHINH_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadDataVaiTroChucVu">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadDataVaiTroChucVuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="LoadDataVaiTroChucVuResult" nillable="true" type="q21:ArrayOfE_VAITROCHUCVU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_VAITROINANHETHONG_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VaiTro" type="xs:int" />
+        <xs:element minOccurs="0" name="TenVietTatInAn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TenVietTatHeThong" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsUsed" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_VAITROINANHETHONG_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="E_VAITROINANHETHONG_InsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckExists_E_VAITROINANHETHONG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VaiTro" type="xs:int" />
+        <xs:element minOccurs="0" name="TenVietTatInAn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TenVietTatHeThong" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckExists_E_VAITROINANHETHONGResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckExists_E_VAITROINANHETHONGResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhMucInAnTheoPhanQuyen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserMasterID" type="xs:int" />
+        <xs:element minOccurs="0" name="TenVietTatHeThong" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LayDanhMucInAnTheoPhanQuyenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LayDanhMucInAnTheoPhanQuyenResult" nillable="true" type="q22:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_PHANQUYEN_BAOCAO">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_PHANQUYEN_BAOCAOResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_HETHONG_PHANQUYEN_BAOCAOResult" nillable="true" type="q23:ArrayOfDM_HETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDanhMucInAn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maChucNang" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maLinhVuc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loaiInAn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDanhMucInAnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetAllDanhMucInAnResult" nillable="true" type="q24:ArrayOfDM_LoaiInAnXD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListTheoTenVietTat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TenVietTat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="donViID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListTheoTenVietTatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetListTheoTenVietTatResult" nillable="true" type="q25:ArrayOfDMInAnXD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThongBaoBaoTriGet">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThongBaoBaoTriGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="ThongBaoBaoTriGetResult" nillable="true" type="q26:HC_SysNotification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DanhSachPhimTatDaDinhNghia">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DanhSachPhimTatDaDinhNghiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DanhSachPhimTatDaDinhNghiaResult" nillable="true" type="q27:ArrayOfHTPhimTatChucNang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LIENKETNGOAI_ListByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LIENKETNGOAI_ListByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="HETHONG_LIENKETNGOAI_ListByUserIDResult" nillable="true" type="q28:ArrayOfHETHONG_LIENKETNGOAI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LIENKETNGOAI_GetbyChucNang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user_PortalID" type="xs:long" />
+        <xs:element minOccurs="0" name="tenVietTat" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LIENKETNGOAI_GetbyChucNangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="HETHONG_LIENKETNGOAI_GetbyChucNangResult" nillable="true" type="q29:UserChucNang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LIENKETNGOAI_ListChucNang">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LIENKETNGOAI_ListChucNangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="HETHONG_LIENKETNGOAI_ListChucNangResult" nillable="true" type="q30:ArrayOfVoChucNang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_DONVI_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="canBoDonVi" nillable="true" type="q31:CANBO_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_DONVI_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="CANBO_DONVI_LstResult" nillable="true" type="q32:ArrayOfCANBO_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="canBo" nillable="true" type="q33:CANBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="CANBO_LstResult" nillable="true" type="q34:ArrayOfCANBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="conNguoi" nillable="true" type="q35:CONNGUOI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="CONNGUOI_LstResult" nillable="true" type="q36:ArrayOfCONNGUOI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="conNguoi" nillable="true" type="q37:CONNGUOI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CONNGUOI_InsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="conNguoi" nillable="true" type="q38:CONNGUOI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_UpdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="conNguoiID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_DelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_CHUCDANH_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dmChucDanh" nillable="true" type="q39:DM_CHUCDANH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_CHUCDANH_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_CHUCDANH_LstResult" nillable="true" type="q40:ArrayOfDM_CHUCDANH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_CHUCVU_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dmChucVu" nillable="true" type="q41:DM_CHUCVU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_CHUCVU_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_CHUCVU_LstResult" nillable="true" type="q42:ArrayOfDM_CHUCVU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DANTOC_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dmDanToc" nillable="true" type="q43:DM_DANTOC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DANTOC_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DANTOC_LstResult" nillable="true" type="q44:ArrayOfDM_DANTOC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dmDonVi" nillable="true" type="q45:DM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DONVI_LstResult" nillable="true" type="q46:ArrayOfDM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_LstDropTreeView">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_LstDropTreeViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DONVI_LstDropTreeViewResult" nillable="true" type="q47:ArrayOfDM_DONVI_V1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectListDonVi">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectListDonViResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="SelectListDonViResult" nillable="true" type="q48:ArrayOfDM_DONVI_V1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_ByCAP01">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_ByCAP01Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DONVI_ByCAP01Result" nillable="true" type="q49:ArrayOfDM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DUONG_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dmDuong" nillable="true" type="q50:DM_DUONG" />
+        <xs:element minOccurs="0" name="dMPhuongXaID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DUONG_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DUONG_LstResult" nillable="true" type="q51:ArrayOfDM_DUONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dmHeThong" nillable="true" type="q52:DM_HETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_HETHONG_LstResult" nillable="true" type="q53:ArrayOfDM_HETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThongTinHeThongById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hethongId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetThongTinHeThongByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/DungChung.Entities.Models" minOccurs="0" name="GetThongTinHeThongByIdResult" nillable="true" type="q54:GetThongTinHeThongResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/DungChung.Entities.Models" minOccurs="0" name="request" nillable="true" type="q55:InsertOrUpdHeThongRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DM_HETHONG_InsertResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/DungChung.Entities.Models" minOccurs="0" name="request" nillable="true" type="q56:InsertOrUpdHeThongRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DM_HETHONG_UpdateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_DeleteByHeThongID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HeThongID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_HETHONG_DeleteByHeThongIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DM_HETHONG_DeleteByHeThongIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_LINHVUC_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pLinhVuc" nillable="true" type="q57:DM_LINHVUC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_LINHVUC_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_LINHVUC_LstResult" nillable="true" type="q58:ArrayOfDM_LINHVUC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_LOAIGIAYTO_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pLoaiGiayTo" nillable="true" type="q59:DM_LOAIGIAYTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_LOAIGIAYTO_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_LOAIGIAYTO_LstResult" nillable="true" type="q60:ArrayOfDM_LOAIGIAYTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_NHOMDANTOC_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pNhomDanToc" nillable="true" type="q61:DM_NHOMDANTOC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_NHOMDANTOC_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_NHOMDANTOC_LstResult" nillable="true" type="q62:ArrayOfDM_NHOMDANTOC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_NHOMTHUTUC_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pNhomThuTuc" nillable="true" type="q63:DM_NHOMTHUTUC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_NHOMTHUTUC_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_NHOMTHUTUC_LstResult" nillable="true" type="q64:ArrayOfDM_NHOMTHUTUC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_PHUONGXA_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pPhuongXa" nillable="true" type="q65:DM_PHUONGXA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_PHUONGXA_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_PHUONGXA_LstResult" nillable="true" type="q66:ArrayOfDM_PHUONGXA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_QUANHUYEN_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pQuanHuyen" nillable="true" type="q67:DM_QUANHUYEN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_QUANHUYEN_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_QUANHUYEN_LstResult" nillable="true" type="q68:ArrayOfDM_QUANHUYEN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_QUOCGIA_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pQuocGia" nillable="true" type="q69:DM_QUOCGIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_QUOCGIA_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_QUOCGIA_LstResult" nillable="true" type="q70:ArrayOfDM_QUOCGIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_THUTUCHANHCHINH_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pThuTucHanhChinh" nillable="true" type="q71:DM_THUTUCHANHCHINH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_THUTUCHANHCHINH_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_THUTUCHANHCHINH_LstResult" nillable="true" type="q72:ArrayOfDM_THUTUCHANHCHINH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_TINHTHANH_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pTinhThanh" nillable="true" type="q73:DM_TINHTHANH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_TINHTHANH_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_TINHTHANH_LstResult" nillable="true" type="q74:ArrayOfDM_TINHTHANH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_TONGIAO_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pTonGiao" nillable="true" type="q75:DM_TONGIAO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_TONGIAO_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_TONGIAO_LstResult" nillable="true" type="q76:ArrayOfDM_TONGIAO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_TRINHDO_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pTrinhDo" nillable="true" type="q77:DM_TRINHDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_TRINHDO_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_TRINHDO_LstResult" nillable="true" type="q78:ArrayOfDM_TRINHDO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DOANHNGHIEP_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pDoanhNghiep" nillable="true" type="q79:DOANHNGHIEP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DOANHNGHIEP_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DOANHNGHIEP_LstResult" nillable="true" type="q80:ArrayOfDOANHNGHIEP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DOANHNGHIEP_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pDoanhNghiep" nillable="true" type="q81:DOANHNGHIEP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DOANHNGHIEP_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DOANHNGHIEP_InsResult" nillable="true" type="q82:DOANHNGHIEP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DOANHNGHIEP_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pDoanhNghiep" nillable="true" type="q83:DOANHNGHIEP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DOANHNGHIEP_UpdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DOANHNGHIEP_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDoanhNghiepID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DOANHNGHIEP_DelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_HETHONG_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pDonVi_HeThong" nillable="true" type="q84:DONVI_HETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_HETHONG_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DONVI_HETHONG_LstResult" nillable="true" type="q85:ArrayOfDONVI_HETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_DONVI_DeleteByDonViID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_DONVI_DeleteByDonViIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HETHONG_DONVI_DeleteByDonViIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_HETHONG_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="obj" nillable="true" type="q86:DONVI_HETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_HETHONG_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DONVI_HETHONG_UpdateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_HETHONG_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="obj" nillable="true" type="q87:DONVI_HETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_HETHONG_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DONVI_HETHONG_InsertResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_HETHONG_UpdateByDonViID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donviID" type="xs:long" />
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="lsDonViHeThong" nillable="true" type="q88:ArrayOfDONVI_HETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_HETHONG_UpdateByDonViIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DONVI_HETHONG_UpdateByDonViIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_CAPHANHCHINH_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pE_CapHanhChinh" nillable="true" type="q89:E_CAPHANHCHINH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_CAPHANHCHINH_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="E_CAPHANHCHINH_LstResult" nillable="true" type="q90:ArrayOfE_CAPHANHCHINH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GIAYTOTUYTHAN_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pGiayToTuyThan" nillable="true" type="q91:GIAYTOTUYTHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GIAYTOTUYTHAN_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GIAYTOTUYTHAN_InsResult" nillable="true" type="q92:GIAYTOTUYTHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GIAYTOTUYTHAN_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pGiayToTuyThan" nillable="true" type="q93:GIAYTOTUYTHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GIAYTOTUYTHAN_UpdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GIAYTOTUYTHAN_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pGiayToTuyThan" nillable="true" type="q94:GIAYTOTUYTHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GIAYTOTUYTHAN_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GIAYTOTUYTHAN_LstResult" nillable="true" type="q95:ArrayOfGIAYTOTUYTHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_LOAIDONVI_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pE_LoaiDonVi" nillable="true" type="q96:E_LOAIDONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_LOAIDONVI_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="E_LOAIDONVI_LstResult" nillable="true" type="q97:ArrayOfE_LOAIDONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LINHVUC_DONVI_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pLinhVuc_DonVi" nillable="true" type="q98:LINHVUC_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LINHVUC_DONVI_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="LINHVUC_DONVI_LstResult" nillable="true" type="q99:ArrayOfLINHVUC_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LINHVUC_USER_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pLinhVuc_User" nillable="true" type="q100:LINHVUC_USER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LINHVUC_USER_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="LINHVUC_USER_LstResult" nillable="true" type="q101:ArrayOfLINHVUC_USER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pUser_Master" nillable="true" type="q102:USER_MASTER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="USER_MASTER_LstResult" nillable="true" type="q103:ArrayOfUSER_MASTER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_Lst_isPhongBan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pUser_Master" nillable="true" type="q104:USER_MASTER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_Lst_isPhongBanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="USER_MASTER_Lst_isPhongBanResult" nillable="true" type="q105:ArrayOfUSER_MASTER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByDonViID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="phongBanID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="donViID" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByDonViIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetUserByDonViIDResult" nillable="true" type="q106:ArrayOfUSER_MASTER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByUserIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userPortalIds" nillable="true" type="q107:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByUserIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetUserByUserIdsResult" nillable="true" type="q108:ArrayOfUSER_MASTER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DUONG_PHUONG_QUAN_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="pDuong_Phuong_Quan" nillable="true" type="q109:DUONG_PHUONG_QUAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DUONG_PHUONG_QUAN_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DUONG_PHUONG_QUAN_LstResult" nillable="true" type="q110:ArrayOfDUONG_PHUONG_QUAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_GIAYTOTUYTHAN_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="soGiayToTuyThan" nillable="true" type="q111:CONNGUOI_GIAYTOTUYTHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CONNGUOI_GIAYTOTUYTHAN_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="CONNGUOI_GIAYTOTUYTHAN_LstResult" nillable="true" type="q112:ArrayOfCONNGUOI_GIAYTOTUYTHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByCondition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="user" nillable="true" type="q113:THONGTINUSER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByConditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetUserByConditionResult" nillable="true" type="q114:ArrayOfTHONGTINUSER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByRoleID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+        <xs:element minOccurs="0" name="DonViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByRoleIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetUserByRoleIDResult" nillable="true" type="q115:ArrayOfTHONGTINUSER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleByCondition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="role" nillable="true" type="q116:ROLE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleByConditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetRoleByConditionResult" nillable="true" type="q117:ArrayOfROLE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhongBanIDByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhongBanIDByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPhongBanIDByUserIDResult" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="cANBO" nillable="true" type="q118:CANBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CANBO_InsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_DONVI_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="cANBO_DONVI" nillable="true" type="q119:CANBO_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANBO_DONVI_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CANBO_DONVI_InsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dONVI_LDAP" nillable="true" type="q120:DONVI_LDAP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DONVI_LDAP_InsResult" nillable="true" type="q121:DONVI_LDAP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_LstByOU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oU" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_LstByOUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DONVI_LDAP_LstByOUResult" nillable="true" type="q122:DONVI_LDAP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_LstById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_LstByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DONVI_LDAP_LstByIdResult" nillable="true" type="q123:DONVI_LDAP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="uSER_MASTER" nillable="true" type="q124:USER_MASTER" />
+        <xs:element minOccurs="0" name="ChucVuID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="USER_MASTER_InsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRelateMasterDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+        <xs:element minOccurs="0" name="tenDonVi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPortalId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRelateMasterDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertRelateMasterDBResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="uSER_MASTER" nillable="true" type="q125:USER_MASTER" />
+        <xs:element minOccurs="0" name="ChucVuID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_UpdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_UpdCanBo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="uSER_MASTER" nillable="true" type="q126:USER_MASTER" />
+        <xs:element minOccurs="0" name="ChucVuID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="canbodonviID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_UpdCanBoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_CAPDONVI_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="eCapDonVi" nillable="true" type="q127:E_CAPDONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_CAPDONVI_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="E_CAPDONVI_LstResult" nillable="true" type="q128:ArrayOfE_CAPDONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dmDonVi" nillable="true" type="q129:DM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_SearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DONVI_SearchResult" nillable="true" type="q130:ArrayOfDM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dmDonVi" nillable="true" type="q131:DM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DONVI_InsResult" nillable="true" type="q132:DM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="dmDonVi" nillable="true" type="q133:DM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_UpdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DONVI_UpdResult" nillable="true" type="q134:DM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_GetByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_GetByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DONVI_GetByIDResult" nillable="true" type="q135:DM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DONVI_LDAP_LstResult" nillable="true" type="q136:ArrayOfDONVI_LDAP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_DelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DONVI_LDAP_DelResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="e" nillable="true" type="q137:DONVI_LDAP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DONVI_LDAP_UpdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DONVI_LDAP_UpdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_DelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_LstByDonViCapCha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViCapChaID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_LstByDonViCapChaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_DONVI_LstByDonViCapChaResult" nillable="true" type="q138:ArrayOfDM_DONVI_Tree" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="hETHONG_ROLEGROUP" nillable="true" type="q139:HETHONG_ROLEGROUP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="HETHONG_ROLEGROUP_InsResult" nillable="true" type="q140:HETHONG_ROLEGROUP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="HETHONG_ROLEGROUP_LstResult" nillable="true" type="q141:ArrayOfHETHONG_ROLEGROUP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="hETHONG_ROLEGROUP" nillable="true" type="q142:HETHONG_ROLEGROUP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_UpdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_Del">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hETHONG_ROLEGROUPID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_DelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HETHONG_ROLEGROUP_DelResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LINHVUC_DONVI_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="linhVucDonVi" nillable="true" type="q143:LINHVUC_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LINHVUC_DONVI_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LINHVUC_DONVI_InsResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LINHVUC_DONVI_Del_ByDonViID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LINHVUC_DONVI_Del_ByDonViIDResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_LINHVUC_GetByDonViID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donviID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_LINHVUC_GetByDonViIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DM_LINHVUC_GetByDonViIDResult" nillable="true" type="q144:ArrayOfDM_LINHVUC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THAMSO_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="tHAMSO" nillable="true" type="q145:THAMSO" />
+        <xs:element minOccurs="0" name="iD" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THAMSO_UpdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="THAMSO_UpdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THAMSO_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THAMSO_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="THAMSO_LstResult" nillable="true" type="q146:ArrayOfTHAMSO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingCauHinhLichCongTac">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingCauHinhLichCongTacResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="GetSettingCauHinhLichCongTacResult" nillable="true" type="q147:SlideLichCongTacSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSettingLCT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViId" nillable="true" type="xs:long" />
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="setting" nillable="true" type="q148:SlideLichCongTacSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSettingLCTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveSettingLCTResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THAMSO_ByName_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="tHAMSO" nillable="true" type="q149:THAMSO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THAMSO_ByName_UpdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="THAMSO_ByName_UpdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRoles_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="uRole" nillable="true" type="q150:UserRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRoles_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserRoles_DeleteResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRole_Ins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="uRole" nillable="true" type="q151:UserRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRole_InsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserRole_InsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleGroup_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donviId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleGroup_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="RoleGroup_LstResult" nillable="true" type="q152:ArrayOfROLEGROUP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhongBanByDonViId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donviId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhongBanByDonViIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetPhongBanByDonViIdResult" nillable="true" type="q153:ArrayOfDM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasAdminRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasAdminRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HasAdminRoleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuanLyDonViRole">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuanLyDonViRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetQuanLyDonViRoleResult" nillable="true" type="q154:ArrayOfQUANLYHETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDonViByUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDonViByUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetDonViByUserIdResult" nillable="true" type="q155:ArrayOfDM_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuanLyHeThongRole">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuanLyHeThongRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetQuanLyHeThongRoleResult" nillable="true" type="q156:ArrayOfQUANLYHETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ROLE_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donviId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ROLE_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="ROLE_LstResult" nillable="true" type="q157:ArrayOfROLE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRoles_GetRolesByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="uRole" nillable="true" type="q158:UserRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRoles_GetRolesByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="UserRoles_GetRolesByUserIDResult" nillable="true" type="q159:ArrayOfUserRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_THONGTINCANBO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donviId" type="xs:int" />
+        <xs:element minOccurs="0" name="userIi" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_THONGTINCANBOResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="Get_THONGTINCANBOResult" nillable="true" type="q160:THONGTINCANBO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THONGTINCANBO_Upd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="canbo" nillable="true" type="q161:THONGTINCANBO" />
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="canboDonvis" nillable="true" type="q162:ArrayOfCANBO_DONVI" />
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="giaytotuythans" nillable="true" type="q163:ArrayOfGIAYTOTUYTHAN" />
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="lienketngoais" nillable="true" type="q164:ArrayOfHETHONG_LIENKETNGOAI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="THONGTINCANBO_UpdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="THONGTINCANBO_UpdResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_NGUOIDUNG_Update_Image">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NguoiDungID" type="xs:long" />
+        <xs:element minOccurs="0" name="imageBase64" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_NGUOIDUNG_Update_ImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DM_DONVI_NGUOIDUNG_Update_ImageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_NGUOIDUNG_Get_Image">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NguoiDungID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DM_DONVI_NGUOIDUNG_Get_ImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DM_DONVI_NGUOIDUNG_Get_ImageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_LOAICANHAN_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_LOAICANHAN_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="E_LOAICANHAN_LstResult" nillable="true" type="q165:ArrayOfE_LOAICANHAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LINHVUC__SelectByHeThongID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="heThongID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LINHVUC__SelectByHeThongIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="HETHONG_LINHVUC__SelectByHeThongIDResult" nillable="true" type="q166:ArrayOfHETHONG_LINHVUC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LINHVUC_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="obj" nillable="true" type="q167:HETHONG_LINHVUC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LINHVUC_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HETHONG_LINHVUC_InsertResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LINHVUC_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="obj" nillable="true" type="q168:HETHONG_LINHVUC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_LINHVUC_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HETHONG_LINHVUC_UpdateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_SelectByHeThongID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="heThongID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HETHONG_ROLEGROUP_SelectByHeThongIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="HETHONG_ROLEGROUP_SelectByHeThongIDResult" nillable="true" type="q169:ArrayOfHETHONG_ROLEGROUP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_LOAIHETHONG_Lst">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E_LOAIHETHONG_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="E_LOAIHETHONG_LstResult" nillable="true" type="q170:ArrayOfE_LOAIHETHONG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListThuTucHanhChinhDonVi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="thutuchanhchinhDonvi" nillable="true" type="q171:THUTUCHANHCHINH_DONVI" />
+        <xs:element minOccurs="0" name="pageNum" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListThuTucHanhChinhDonViResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="ListThuTucHanhChinhDonViResult" nillable="true" type="q172:ArrayOfTHUTUCHANHCHINH_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GethuTucHanhChinhDonViById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="thuTucHanhChinhDonViId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GethuTucHanhChinhDonViByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GethuTucHanhChinhDonViByIdResult" nillable="true" type="q173:THUTUCHANHCHINH_DONVI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_LstThayDoi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HoTen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TenDonVi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_LstThayDoiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="USER_MASTER_LstThayDoiResult" nillable="true" type="q174:ArrayOfUSER_MASTERLst" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_LstCanBo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HoTen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TenDonVi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="USER_MASTER_LstCanBoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="USER_MASTER_LstCanBoResult" nillable="true" type="q175:ArrayOfUSER_MASTERLstCanBo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckDonViInQLVB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViId" type="xs:long" />
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckDonViInQLVBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckDonViInQLVBResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchConNguoi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="voConNguoiCriteria" nillable="true" type="q176:VoConNguoiCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchConNguoiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="SearchConNguoiResult" nillable="true" type="q177:ArrayOfVoConNguoi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPhatHanh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="voConNguoiCriteria" nillable="true" type="q178:VoConNguoiCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPhatHanhResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="SearchPhatHanhResult" nillable="true" type="q179:ArrayOfVoConNguoi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePhatHanh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="conNguoiID" type="xs:long" />
+        <xs:element minOccurs="0" name="isPublic" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePhatHanhResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePhatHanhResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonViByCap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cap" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="donViCapChaID" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonViByCapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DonViByCapResult" nillable="true" type="q180:ArrayOfVoDonVi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonViByDonViCapCha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViCapChaID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonViByDonViCapChaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DonViByDonViCapChaResult" nillable="true" type="q181:ArrayOfVoDonVi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonViInUserMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViCapChaID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DonViInUserMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="DonViInUserMasterResult" nillable="true" type="q182:ArrayOfVoDonVi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDonViById_Lst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donViID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDonViById_LstResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/DungChung.Entities" minOccurs="0" name="GetDonViById_LstResult" nillable="true" type="q183:ArrayOfVoDonViSearch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZimbraSetting">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetZimbraSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="GetZimbraSettingResult" nillable="true" type="q184:ZimbraSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetZimbraSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="zimbraSetting" nillable="true" type="q185:ZimbraSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetZimbraSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetZimbraSettingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlfrescoSetting">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlfrescoSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="GetAlfrescoSettingResult" nillable="true" type="q186:AlfrescoSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAlfrescoSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="alfrescoSetting" nillable="true" type="q187:AlfrescoSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAlfrescoSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetAlfrescoSettingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmailSetting">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmailSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/DungChung.Entities.Configuration" minOccurs="0" name="GetEmailSettingResult" nillable="true" type="q188:EmailSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

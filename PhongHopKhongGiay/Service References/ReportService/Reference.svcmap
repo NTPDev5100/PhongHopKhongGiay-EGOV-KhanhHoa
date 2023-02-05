@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7eb446ce-dfbd-497f-956c-2ac2b2a7a423" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9092/PhongHopKhongGiay/ReportService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReportService.disco" MetadataType="Disco" ID="0a9144cd-690a-482f-87f5-e2470fb3c1a2" SourceId="1" SourceUrl="http://localhost:9092/PhongHopKhongGiay/ReportService.svc?disco" />
+    <MetadataFile FileName="ReportService.xsd" MetadataType="Schema" ID="36f104b2-72e4-4b18-a81c-c26438351ffb" SourceId="1" SourceUrl="http://localhost:9092/PhongHopKhongGiay/ReportService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReportService1.xsd" MetadataType="Schema" ID="39862cd1-023b-4236-92d6-6cb07fcfd091" SourceId="1" SourceUrl="http://localhost:9092/PhongHopKhongGiay/ReportService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReportService.wsdl" MetadataType="Wsdl" ID="a93f3c9d-df18-409e-8911-c3d514659b98" SourceId="1" SourceUrl="http://localhost:9092/PhongHopKhongGiay/ReportService.svc?wsdl" />
+    <MetadataFile FileName="ReportService2.xsd" MetadataType="Schema" ID="8c2bc5e4-63a7-4361-8d52-63f37ff49a3f" SourceId="1" SourceUrl="http://localhost:9092/PhongHopKhongGiay/ReportService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

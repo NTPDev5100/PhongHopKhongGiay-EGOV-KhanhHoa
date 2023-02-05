@@ -1,0 +1,7 @@
+<log4net:event logger="ChapThuanDauTu.SRV.Data.QuanLyDauTuDAC" timestamp="2019-11-15T12:33:32.7593122+07:00" level="ERROR" thread="141" domain="/LM/W3SVC/2/ROOT/ChapThuanDauTu-11-132182696122706162" username="IIS APPPOOL\SoXayDung_Service"><log4net:message>Class: ChapThuanDauTuDAC, function: sp_QLCHATLUONGCONGTRINH_InsUpdateDel: Object reference not set to an instance of an object.</log4net:message><log4net:properties><log4net:data name="log4net:UserName" value="IIS APPPOOL\SoXayDung_Service" /><log4net:data name="log4net:Identity" value="" /><log4net:data name="log4net:HostName" value="GMC-50350" /></log4net:properties></log4net:event>
+<log4net:event logger="ChapThuanDauTu.SRV.Data.QuanLyDauTuDAC" timestamp="2019-11-15T12:33:37.1858463+07:00" level="ERROR" thread="141" domain="/LM/W3SVC/2/ROOT/ChapThuanDauTu-11-132182696122706162" username="IIS APPPOOL\SoXayDung_Service"><log4net:message>Class: ChapThuanDauTuDAC, function: QLDT_GetAllByID: Invalid column name 'URL_FILEChapThuanCTDauTu'.
+Invalid column name 'FILEChapThuanCTDauTu'.
+Invalid column name 'URL_FILEQuanLyChuDauTu'.
+Invalid column name 'FILEQuanLyChuDauTu'.
+Invalid column name 'URL_FILEChapThuanDauTu'.
+Invalid column name 'FILEChapThuanDauTu'.</log4net:message><log4net:properties><log4net:data name="log4net:UserName" value="IIS APPPOOL\SoXayDung_Service" /><log4net:data name="log4net:Identity" value="" /><log4net:data name="log4net:HostName" value="GMC-50350" /></log4net:properties></log4net:event>
